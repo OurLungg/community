@@ -41,6 +41,9 @@ public class AuthorizeController {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private UserService userService;
+
 
     @GetMapping("/callback")
     public String callback(@RequestParam(name = "code")String code,
@@ -64,7 +67,7 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
-            userMapper.insert(user);
+            userService.insert(user);
             request.getSession().setAttribute("user",githubUser);
             //重定向到index 并且去掉网址中的请求参数
             return "redirect:/";

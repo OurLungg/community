@@ -20,7 +20,7 @@ public class UserService {
         return userMapper.findAll();
     }
 
-//    public void insert(User user) {
-//        userMapper.insert(user);
-//    }
+    public void insert(User user) {
+        userMapper.insert(user);
+    }
 }
