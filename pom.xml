@@ -40,6 +40,21 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+<!--        java模拟post请求(OkHttp)-->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.5.0</version>
+        </dependency>
+
+<!--        将对象转为json-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.68</version>
+        </dependency>
+
     </dependencies>
 
     <build>
