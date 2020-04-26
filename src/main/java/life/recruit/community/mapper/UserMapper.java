@@ -16,6 +16,7 @@ import java.util.List;
 public interface UserMapper {
 
     //mybatis会把#{name}替换成user中的name
+    //如果是一个类 可以直接用#{}
     @Insert("insert into test (account_id,name,token,gmt_create,gmt_modified) " +
             "values (#{accountId},#{name},#{token},#{gmtCreate},#{gmtModified})")
     void insert(User user);
@@ -31,4 +32,9 @@ public interface UserMapper {
     })
     @Select("Select * from test")
     List<User> findAll();
+
+
+    //如果不是一个类用#{} 需要加一个注解@Param("token")
+    @Select("select * from test where token = #{token}")
+    User findBytoken(@Param("token") String token);
 }
