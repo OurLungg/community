@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-//允许这个类接收前端的请求
+//允许这个类接收前端http的请求
 @Controller
 public class IndexController {
 

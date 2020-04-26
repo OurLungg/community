@@ -1,7 +1,7 @@
 package life.recruit.community.dto;
 
 /**
- * dto : 数据传输对象
+ * dto : 数据传输对象  (网络之间 类和类之间传输用Dto)
  */
 public class AccessTokenDTO {
     private String client_id;
