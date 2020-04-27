@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class IndexController {
 
+    //@RequestParam 接收参数
+
 //    @GetMapping("/hello")
 //    public String hello(@RequestParam(name = "name")String name, Model model) {
 //        model.addAttribute("name", name);
