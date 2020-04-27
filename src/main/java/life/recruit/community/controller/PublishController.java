@@ -68,16 +68,19 @@ public class PublishController {
         //首先验证是否用户已经登录
         User user = null;
         Cookie[] cookies = request.getCookies();
-        for (Cookie cookie : cookies) {
-            if(cookie.getName().equals("token")){
-                String token = cookie.getValue();
-                user = userService.findBytoken(token);
-                if(user != null){
-                    request.getSession().setAttribute("user",user);
+        if(cookies != null && cookies.length != 0){
+            for (Cookie cookie : cookies) {
+                if(cookie.getName().equals("token")){
+                    String token = cookie.getValue();
+                    user = userService.findBytoken(token);
+                    if(user != null){
+                        request.getSession().setAttribute("user",user);
+                    }
+                    break;
                 }
-                break;
             }
         }
+
 
         if(user == null){
             //model加入之后 直接在前端th:text="${error} 取就可以

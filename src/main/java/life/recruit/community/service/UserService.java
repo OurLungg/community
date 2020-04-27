@@ -27,4 +27,8 @@ public class UserService {
     public User findBytoken(String token) {
         return userMapper.findBytoken(token);
     }
+
+    public User findById(Integer id) {
+        return userMapper.findById(id);
+    }
 }

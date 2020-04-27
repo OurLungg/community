@@ -8,6 +8,7 @@ import okhttp3.*;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.Objects;
 
 //将对象实例化放到ioc容器中 想用直接用
 //怎么用呢 直接用Autowired注入 加载到使用类中
@@ -43,10 +44,9 @@ public class GithubProvider {
 
         try {
             Response response = client.newCall(request).execute();
-            String string = response.body().string();
+            String string = Objects.requireNonNull(response.body()).string();
             //fastjson中的一个函数  将string的json转为java对象
-            GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
-            return githubUser;
+            return JSON.parseObject(string, GithubUser.class);
         } catch (IOException e) {
         }
 

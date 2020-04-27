@@ -1,10 +1,10 @@
-package life.recruit.community.model;
+package life.recruit.community.dto;
 
-
+import life.recruit.community.model.User;
 import lombok.Data;
 
 @Data
-public class Article {
+public class ArticleDTO {
     private Integer id;
     private String title;
     private String description;
@@ -15,4 +15,5 @@ public class Article {
     private Integer view_count;
     private Integer comment_count;
     private Integer like_count;
+    private User user;
 }

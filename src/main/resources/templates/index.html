@@ -4,6 +4,7 @@
     <title>Recruit Community</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/community.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
 
@@ -50,5 +51,37 @@
         </div>
     </div>
 </nav>
+
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xc-12">
+            <h2> <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                发现
+            </h2>
+            <hr>
+
+            <div class="media" th:each="article : ${articles}">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object img-circle"
+                             th:src="${article.user.avatar_url}">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading" th:text="${article.title}"></h4>
+                    <span th:text="${article.description}"></span> <br>
+                    <span class="text-desc">
+                        <span th:text="${article.comment_count}"></span>个回复
+                        <span th:text="${article.view_count}"></span>次浏览
+                        <span th:text="${#dates.format(article.gmt_create,'yyyy-MM-dd')}"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xc-12">
+            <h3>热门岗位</h3>
+        </div>
+    </div>
+</div>
 </body>
 </html>
