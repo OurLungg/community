@@ -2,6 +2,8 @@ package life.recruit.community.service;
 
 import life.recruit.community.dto.ArticleDTO;
 import life.recruit.community.dto.PaginationDTO;
+import life.recruit.community.exception.CustomizeErrorCode;
+import life.recruit.community.exception.CustomizeException;
 import life.recruit.community.mapper.ArticleMapper;
 import life.recruit.community.model.Article;
 import life.recruit.community.model.User;
@@ -92,6 +94,10 @@ public class ArticleService {
     public ArticleDTO getById(Integer id) {
         //将文章对象绑定到文章DTO上
         Article article = articleMapper.getById(id);
+        //增加文章为空判断
+        if(article == null){
+            throw new CustomizeException(CustomizeErrorCode.ARTICLE_NOT_FOUND);
+        }
         ArticleDTO articleDTO = new ArticleDTO();
         //工具类对象 快速的把第一个对象的属性拷贝到第二个对象的属性上
         BeanUtils.copyProperties(article,articleDTO);
