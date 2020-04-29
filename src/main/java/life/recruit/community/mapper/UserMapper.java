@@ -17,7 +17,7 @@ public interface UserMapper {
 
     //mybatis会把#{name}替换成user中的name
     //如果是一个类 可以直接用#{}
-    @Insert("insert into test (account_id,name,token,gmt_create,gmt_modified,avatar_url) " +
+    @Insert("insert into tb_github_user_info (account_id,name,token,gmt_create,gmt_modified,avatar_url) " +
             "values (#{accountId},#{name},#{token},#{gmtCreate},#{gmtModified},#{avatarUrl})")
     void insert(User user);
 
@@ -30,23 +30,23 @@ public interface UserMapper {
 //            @Result(property = "gmtCreate", column = "gmt_create"),
 //            @Result(property = "gmtModified", column = "gmt_modified")
 //    })
-    @Select("Select * from test")
+    @Select("Select * from tb_github_user_info")
     List<User> findAll();
 
 
     //如果不是一个类用#{} 需要加一个注解@Param("token")
-    @Select("select * from test where token = #{token}")
+    @Select("select * from tb_github_user_info where token = #{token}")
     User findBytoken(@Param("token") String token);
 
 
-    @Select("select * from test where id = #{id}")
+    @Select("select * from tb_github_user_info where id = #{id}")
     User findById(@Param("id") Integer id);
 
     //变量找value 对象找get方法
-    @Select("select * from test where account_id = #{accountId}")
+    @Select("select * from tb_github_user_info where account_id = #{accountId}")
     User findByAccountId(@Param("accountId") String accountId);
 
-    @Update("update test set name = #{name} , token = #{token} , gmt_modified = #{gmt_modified} ," +
-            " avatar_url = #{avatar_url} where id = #{id}")
+    @Update("update tb_github_user_info set name = #{name} , token = #{token} , gmt_modified = #{gmtModified} ," +
+            " avatar_url = #{avatarUrl} where id = #{id}")
     void update(User user);
 }

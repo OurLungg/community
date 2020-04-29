@@ -3,11 +3,11 @@
 <head>
     <title>Recruit Community - Publish</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/community.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <script src="js/jquery-3.5.0.min.js"></script>
-    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <script src="/js/jquery-3.5.0.min.js"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
 
 </head>
 <body>
@@ -26,6 +26,8 @@
 <!--            form表单action是提交的地址 提交方式是Post  需要跟submit的button配合
                 提交后跳转到publish的post接口  PostMapping-->
             <form action="/publish" method="post">
+<!--                提交时把属性传递过来 但是不展示到页面-->
+                <input type="hidden" name="id" th:value="${id}">
                 <div class="form-group">
                     <label for="title">信息标题</label>
                     <input type="text" class="form-control" th:value="${title}" id="title" name="title" placeholder="信息标题">

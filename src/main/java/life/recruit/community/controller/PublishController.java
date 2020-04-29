@@ -1,17 +1,21 @@
 package life.recruit.community.controller;
 
 
+import life.recruit.community.dto.ArticleDTO;
 import life.recruit.community.mapper.ArticleMapper;
 import life.recruit.community.model.Article;
 import life.recruit.community.model.User;
+import life.recruit.community.service.ArticleService;
 import life.recruit.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.jws.WebParam;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,9 +27,8 @@ public class PublishController {
     //如果是get请求 就渲染页面
     //如果是Post请求  就执行请求
 
-    //ArticleService
     @Autowired
-    private ArticleMapper articleMapper;
+    private ArticleService articleService;
 
     @GetMapping("/publish")
     public String publish() {
@@ -33,11 +36,25 @@ public class PublishController {
         return "publish";
     }
 
+    //编辑信息
+    @GetMapping("/publish/{id}")
+    public String edit(@PathVariable(name = "id") Integer id,
+                       Model model) {
+        ArticleDTO article = articleService.getById(id);
+        model.addAttribute("title", article.getTitle());
+        model.addAttribute("description", article.getDescription());
+        model.addAttribute("tag", article.getTag());
+        model.addAttribute("id", article.getId());
+        return "publish";
+    }
+
+    //发布信息
     @PostMapping("/publish")
     public String doPublish(
             @RequestParam("title") String title,
             @RequestParam("description") String description,
             @RequestParam("tag") String tag,
+            @RequestParam("id") Integer id,
             HttpServletRequest request,
             Model model){
 
@@ -76,9 +93,10 @@ public class PublishController {
         article.setDescription(description);
         article.setTag(tag);
         article.setCreator(user.getId());
-        article.setGmt_create(System.currentTimeMillis());
-        article.setGmt_modified(article.getGmt_create());
-        articleMapper.create(article);
+        //增添了文章id 用于区分发布文章还是编辑文章
+        //id可以为null 因为id自动增长 之前也没有插入
+        article.setId(id);
+        articleService.createOrUpdate(article);
         return "redirect:/";
     }
 }

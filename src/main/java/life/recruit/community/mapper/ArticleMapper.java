@@ -2,10 +2,7 @@ package life.recruit.community.mapper;
 
 import life.recruit.community.dto.ArticleDTO;
 import life.recruit.community.model.Article;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -42,4 +39,11 @@ public interface ArticleMapper {
     //根据文章id来搜索文章
      @Select("select * from article where id = #{id}")
     Article getById(@Param("id")Integer id);
+
+
+     //更新文章（编辑）
+    @Update("update article set title = #{title} , description = #{description} , gmt_modified = #{gmt_modified} , tag = #{tag} " +
+            "where id = #{id} ")
+    void update(Article article);
+
 }

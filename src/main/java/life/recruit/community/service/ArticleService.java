@@ -54,8 +54,6 @@ public class ArticleService {
         //算当前页面分页数据
         paginationDTO.setPagination(totalCount,page,size);
 
-
-
         return paginationDTO;
     }
 
@@ -88,8 +86,6 @@ public class ArticleService {
         //算当前页面分页数据
         paginationDTO.setPagination(totalCount,page,size);
 
-
-
         return paginationDTO;
     }
 
@@ -105,5 +101,18 @@ public class ArticleService {
         articleDTO.setUser(user);
 
         return articleDTO;
+    }
+
+    public void createOrUpdate(Article article) {
+        if(article.getId() == null){
+            //插入新文章
+            article.setGmt_create(System.currentTimeMillis());
+            article.setGmt_modified(article.getGmt_create());
+            articleMapper.create(article);
+        }else {
+            //编辑后的更新文章
+            article.setGmt_modified(article.getGmt_create());
+            articleMapper.update(article);
+        }
     }
 }
