@@ -18,9 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 public class ProfileController {
 
     @Autowired
-    private UserService userService;
-
-    @Autowired
     private ArticleService articleService;
 
     //动态接收跳转路径
@@ -31,22 +28,8 @@ public class ProfileController {
                           @RequestParam(name = "size",defaultValue = "5") Integer size,
                           Model model) {
 
-        User user = null;
-        //如果之前登录过 则token已经被保存到数据库中，此时需要拿到cookie来查询此时的token是否在数据库中
-        //若已经在数据库中则直接显示登录
-        Cookie[] cookies = request.getCookies();
-        if(cookies != null && cookies.length != 0){
-            for (Cookie cookie : cookies) {
-                if(cookie.getName().equals("token")){
-                    String token = cookie.getValue();
-                    user = userService.findBytoken(token);
-                    if(user != null){
-                        request.getSession().setAttribute("user",user);
-                    }
-                    break;
-                }
-            }
-        }
+        //获取当前用户登录状态
+        User user = (User) request.getSession().getAttribute("user");
         //未登录 返回首页
         if(user == null){
             return "redirect:/";

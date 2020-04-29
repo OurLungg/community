@@ -27,9 +27,6 @@ public class PublishController {
     @Autowired
     private ArticleMapper articleMapper;
 
-    @Autowired
-    private UserService userService;
-
     @GetMapping("/publish")
     public String publish() {
 
@@ -65,23 +62,8 @@ public class PublishController {
         }
 
 
-        //首先验证是否用户已经登录
-        User user = null;
-        Cookie[] cookies = request.getCookies();
-        if(cookies != null && cookies.length != 0){
-            for (Cookie cookie : cookies) {
-                if(cookie.getName().equals("token")){
-                    String token = cookie.getValue();
-                    user = userService.findBytoken(token);
-                    if(user != null){
-                        request.getSession().setAttribute("user",user);
-                    }
-                    break;
-                }
-            }
-        }
-
-
+        //获取当前用户登录状态
+        User user = (User) request.getSession().getAttribute("user");
         if(user == null){
             //model加入之后 直接在前端th:text="${error} 取就可以
             model.addAttribute("error", "用户未登录");
