@@ -83,7 +83,6 @@ public class ArticleService {
         //将当前的文章列表信息加入整个页面的列表展示中
         paginationDTO.setArticles(articleDTOList);
 
-
         //拿到文章总数
         Integer totalCount = articleMapper.countByUserId(userID);
         //算当前页面分页数据
@@ -92,5 +91,19 @@ public class ArticleService {
 
 
         return paginationDTO;
+    }
+
+    public ArticleDTO getById(Integer id) {
+        //将文章对象绑定到文章DTO上
+        Article article = articleMapper.getById(id);
+        ArticleDTO articleDTO = new ArticleDTO();
+        //工具类对象 快速的把第一个对象的属性拷贝到第二个对象的属性上
+        BeanUtils.copyProperties(article,articleDTO);
+
+        //将用户信息添加到DTO中
+        User user = userService.findById(article.getCreator());
+        articleDTO.setUser(user);
+
+        return articleDTO;
     }
 }

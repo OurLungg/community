@@ -1,5 +1,6 @@
 package life.recruit.community.mapper;
 
+import life.recruit.community.dto.ArticleDTO;
 import life.recruit.community.model.Article;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -36,4 +37,9 @@ public interface ArticleMapper {
     //统计每个用户id下发布的文章总数
     @Select("select count(id) from article where creator = #{userId}")
     Integer countByUserId(@Param("userId") Integer userID);
+
+
+    //根据文章id来搜索文章
+     @Select("select * from article where id = #{id}")
+    Article getById(@Param("id")Integer id);
 }
