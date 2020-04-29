@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
@@ -61,19 +62,20 @@ public class AuthorizeController {
         accessTokenDTO.setState(state);
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser = githubProvider.getUser(accessToken);
-        System.out.println(githubUser.getAvatar_url());
+
         if(githubUser != null && githubUser.getId()!= null){
             //登录成功
             User user = new User();
-            //获取并生成用户信息
+            //获取并生成用户信息 token唯一标识
             String token = UUID.randomUUID().toString();
             user.setToken(token);
             user.setName(githubUser.getName());
+            //对于github用户唯一的标识是accountId，当登录成功后去数据库查询是否有相同的accountId
+            //如果有则update最新的token
+            //如果没有则create新用户
             user.setAccountId(String.valueOf(githubUser.getId()));
-            user.setGmt_create(System.currentTimeMillis());
-            user.setGmt_modified(user.getGmt_create());
             user.setAvatar_url(githubUser.getAvatar_url());
-            userService.insert(user);
+            userService.createOrUpdate(user);
             //将token放入cookie中 做持久化登录状态使用
             response.addCookie(new Cookie("token",token));
 
@@ -83,5 +85,19 @@ public class AuthorizeController {
             //登录失败 重新登录
             return "redirect:/";
         }
+
+    }
+
+    //退出功能
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request,
+                         HttpServletResponse response){
+        //request 拿到 user 信息
+        //response 拿到 cookie 信息
+        request.getSession().removeAttribute("user");
+        Cookie cookie = new Cookie("token",null);
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
+        return "redirect:/";
     }
 }

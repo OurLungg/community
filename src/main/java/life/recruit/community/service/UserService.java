@@ -16,6 +16,7 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
+
     public List<User> showAll() {
         return userMapper.findAll();
     }
@@ -30,5 +31,22 @@ public class UserService {
 
     public User findById(Integer id) {
         return userMapper.findById(id);
+    }
+
+    public void createOrUpdate(User user) {
+        User dbUser = userMapper.findByAccountId(user.getAccountId());
+        if (dbUser == null) {
+            //插入
+            user.setGmt_create(System.currentTimeMillis());
+            user.setGmt_modified(user.getGmt_create());
+            userMapper.insert(user);
+        } else{
+            //更新
+            dbUser.setGmt_modified(System.currentTimeMillis());
+            dbUser.setAvatar_url(user.getAvatar_url());
+            dbUser.setName(user.getName());
+            dbUser.setToken(user.getToken());
+            userMapper.update(dbUser);
+        }
     }
 }

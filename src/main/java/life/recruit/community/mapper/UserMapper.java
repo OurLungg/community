@@ -41,4 +41,12 @@ public interface UserMapper {
 
     @Select("select * from test where id = #{id}")
     User findById(@Param("id") Integer id);
+
+    //变量找value 对象找get方法
+    @Select("select * from test where account_id = #{accountId}")
+    User findByAccountId(@Param("accountId") String accountId);
+
+    @Update("update test set name = #{name} , token = #{token} , gmt_modified = #{gmt_modified} ," +
+            " avatar_url = #{avatar_url} where id = #{id}")
+    void update(User user);
 }
