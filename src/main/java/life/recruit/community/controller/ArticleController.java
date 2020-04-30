@@ -31,6 +31,9 @@ public class ArticleController {
         //返回DTO（文章+用户） 是组装后的model
         ArticleDTO articleDTO = articleService.getById(id);
 
+        //增加浏览数
+       articleService.incView(id);
+
         //将信息展示到页面
         model.addAttribute("article", articleDTO);
         return "article";

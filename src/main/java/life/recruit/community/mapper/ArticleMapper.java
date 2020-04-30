@@ -46,4 +46,9 @@ public interface ArticleMapper {
             "where id = #{id} ")
     void update(Article article);
 
+
+    //更新文章阅读数
+    @Update("update article set  view_count = #{view_count} where id = #{id}")
+    void updateIncView(Article article);
+
 }

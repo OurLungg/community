@@ -31,7 +31,9 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading" th:text="${article.title}"></h4>
+                    <h4 class="media-heading">
+                        <a th:href="@{'/article/'+ ${article.id}}" th:text="${article.title}"></a>
+                    </h4>
                     <span class="text-desc">
                         <span th:text="${article.comment_count}"></span>个回复
                         <span th:text="${article.view_count}"></span>次浏览

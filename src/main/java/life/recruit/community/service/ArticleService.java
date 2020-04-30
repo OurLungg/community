@@ -121,4 +121,11 @@ public class ArticleService {
             articleMapper.update(article);
         }
     }
+
+    //增加阅读数
+    public void incView(Integer id) {
+        Article article = articleMapper.getById(id);
+        article.setView_count(article.getView_count() + 1);
+        articleMapper.updateIncView(article);
+    }
 }
