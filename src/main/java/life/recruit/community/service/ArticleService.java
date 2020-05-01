@@ -114,6 +114,9 @@ public class ArticleService {
             //插入新文章
             article.setGmt_create(System.currentTimeMillis());
             article.setGmt_modified(article.getGmt_create());
+            article.setComment_count(0);
+            article.setView_count(0);
+            article.setLike_count(0);
             articleMapper.create(article);
         }else {
             //编辑后的更新文章
@@ -123,9 +126,9 @@ public class ArticleService {
     }
 
     //增加阅读数
-    public void incView(Integer id) {
+    public void IncViewCount(Integer id) {
         Article article = articleMapper.getById(id);
         article.setView_count(article.getView_count() + 1);
-        articleMapper.updateIncView(article);
+        articleMapper.IncViewCount(article);
     }
 }

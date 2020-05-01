@@ -49,6 +49,9 @@ public interface ArticleMapper {
 
     //更新文章阅读数
     @Update("update article set  view_count = #{view_count} where id = #{id}")
-    void updateIncView(Article article);
+    void IncViewCount(Article article);
 
+    //更新文章评论数
+    @Update("update article set  comment_count = #{comment_count} where id = #{id}")
+    void IncCommentCount(Article article);
 }
