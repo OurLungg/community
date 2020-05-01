@@ -1,8 +1,7 @@
 package life.recruit.community.controller;
 
 
-import life.recruit.community.dto.CommentDTO;
-import life.recruit.community.mapper.CommentMapper;
+import life.recruit.community.dto.CommentCreateDTO;
 import life.recruit.community.model.Comment;
 import life.recruit.community.model.User;
 import life.recruit.community.service.CommentService;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
 
 @Controller
 public class CommentController {
@@ -35,7 +33,7 @@ public class CommentController {
     //将前端传来的数据json反序列化成对象 进行操作 返给前端时再转成json(Spring处理)
     //@RequestBody 把前端传来的json 反序列化成对象 相当于增强版的@RequestParam
     //CommentDTO是前端传来的数据
-    public Object post(@RequestBody CommentDTO commentDTO,
+    public Object post(@RequestBody CommentCreateDTO commentCreateDTO,
                        HttpServletRequest request) {
 
         //从request中拿到session
@@ -46,9 +44,9 @@ public class CommentController {
         }
 
         Comment comment = new Comment();
-        comment.setParent_id(commentDTO.getParent_id());
-        comment.setContent(commentDTO.getContent());
-        comment.setType(commentDTO.getType());
+        comment.setParent_id(commentCreateDTO.getParent_id());
+        comment.setContent(commentCreateDTO.getContent());
+        comment.setType(commentCreateDTO.getType());
         comment.setGmt_create(System.currentTimeMillis());
         comment.setGmt_modified(System.currentTimeMillis());
         comment.setLike_count((long) 0);

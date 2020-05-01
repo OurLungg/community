@@ -1,12 +1,17 @@
 package life.recruit.community.controller;
 
 import life.recruit.community.dto.ArticleDTO;
+import life.recruit.community.dto.CommentCreateDTO;
+import life.recruit.community.dto.CommentDTO;
 import life.recruit.community.service.ArticleService;
+import life.recruit.community.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.List;
 
 /**
  * 查看发布的文章详情思路：
@@ -23,6 +28,10 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
+    //拿到评论列表
+    @Autowired
+    private CommentService commentService;
+
     //@PathVariable的值可以传到 /{id}里面 实现动态跳转页面
     //跳转之后再查询这个id的文章是否存在，存在则直接从数据库中拿出来展示
     @GetMapping("/article/{id}")
@@ -31,10 +40,15 @@ public class ArticleController {
         //返回DTO（文章+用户） 是组装后的model
         ArticleDTO articleDTO = articleService.getById(id);
 
+        //返回DTO（评论+用户）
+        List<CommentDTO> comments = commentService.listByArticleId(id);
+
         //增加文章阅读数
         articleService.IncViewCount(id);
 
+
         //将信息展示到页面
+        model.addAttribute("comments", comments);
         model.addAttribute("article", articleDTO);
         return "article";
     }

@@ -41,10 +41,45 @@ body {
 }
 
 .community-menu {
+    display: block;
     color: #999;
     font-size: 13px;
+    margin-bottom: 15px;
 }
 
 .jumbotron {
     margin: 50px;
+}
+
+.comment-sp{
+    margin-top: 0px;
+}
+
+.menu{
+    color: #999;
+    margin-top: 6px;
+}
+
+.menu .icon{
+    margin-right: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.menu .icon:hover{
+    color: #499ef3;
+}
+
+.comments{
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+#comment_section{
+    margin-top: 30px;
+}
+
+.article-title{
+    margin-top: 25px;
 }

@@ -4,6 +4,11 @@ function postComment( ) {
     var content = $("#comment_content").val();
     // alert(content);
 
+    if(!content){
+        alert("评论的内容不能为空");
+        return ;
+    }
+
     $.ajax({
         type: "POST",
         //加上/ 是基于根目录 而不是基于article.html
@@ -19,6 +24,8 @@ function postComment( ) {
         dataType: "json"
     })
     alert("评论成功！");
+    //刷新页面
+    window.location.reload();
     //发完隐藏
     $("#comment_section").hide();
 }
