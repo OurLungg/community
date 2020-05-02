@@ -22,10 +22,33 @@ function postComment( ) {
             "type":1
         }),
         dataType: "json"
-    })
+    });
     alert("评论成功！");
     //刷新页面
     window.location.reload();
     //发完隐藏
     $("#comment_section").hide();
 }
+
+function selectTag(value) {
+    var textTag = $("#tag").val();
+    //添加的内容不存在时再添加
+
+    if (textTag.indexOf(value) === -1) {
+        if (textTag) {
+            //内容不为空
+            $("#tag").val(textTag + ',' + value)
+        } else {
+            //内容为空
+            $("#tag").val(value)
+        }
+    }
+
+}
+
+
+$(document).ready(function () {
+    $("#tag").focus(function(){
+        $("#select-tag").show();
+    });
+});

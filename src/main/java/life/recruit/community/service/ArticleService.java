@@ -124,7 +124,7 @@ public class ArticleService {
             articleMapper.create(article);
         }else {
             //编辑后的更新文章
-            article.setGmt_modified(article.getGmt_create());
+            article.setGmt_modified(System.currentTimeMillis());
             articleMapper.update(article);
         }
     }

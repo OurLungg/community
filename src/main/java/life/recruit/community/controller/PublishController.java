@@ -57,8 +57,6 @@ public class PublishController {
             @RequestParam("id") Integer id,
             HttpServletRequest request,
             Model model){
-
-        System.out.println(title);
         //出问题时可以回写内容  内容回显示
         model.addAttribute("title", title);
         model.addAttribute("description", description);

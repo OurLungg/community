@@ -40,7 +40,6 @@ public class IndexController {
                         @RequestParam(name = "page",defaultValue = "1") Integer page,
                         @RequestParam(name = "size",defaultValue = "5") Integer size){
 
-
         //将整个页面信息(文章+用户+分页)装入model模型
         PaginationDTO pagination = articleService.list(page,size);
         model.addAttribute("pagination", pagination);

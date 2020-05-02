@@ -17,7 +17,7 @@ public interface ArticleMapper {
 
     //显示数据并且添加分页
     //添加非对象的数据类型时 需要自己添加映射 上面的article是对象 不用添加映射
-    @Select("select * from article limit #{offset} , #{size}")
+    @Select("select * from article order by gmt_modified desc limit #{offset} , #{size}")
     List<Article> list(@Param("offset") Integer offset,
                        @Param(("size")) Integer size);
 
@@ -26,7 +26,7 @@ public interface ArticleMapper {
     Integer count ();
 
     //根据用户id来搜索文章
-    @Select("select * from article where creator = #{userId} limit #{offset} , #{size}")
+    @Select("select * from article order by gmt_modified where creator = #{userId} limit #{offset} , #{size}")
     List<Article> listByUserId(@Param("userId") Integer userID,
                        @Param("offset") Integer offset,
                        @Param(("size")) Integer size);

@@ -100,3 +100,8 @@ body {
 .img{
     width: 100%;
 }
+
+.tag-tab{
+    display: none;
+
+}
