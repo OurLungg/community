@@ -7,12 +7,16 @@ import life.recruit.community.exception.CustomizeException;
 import life.recruit.community.mapper.ArticleMapper;
 import life.recruit.community.model.Article;
 import life.recruit.community.model.User;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 /**
  *  service存在的意义： 可以同时使用ArticleMapper和UserMapper  起到组装的作用 （中间层）
@@ -130,5 +134,20 @@ public class ArticleService {
         Article article = articleMapper.getById(id);
         article.setView_count(article.getView_count() + 1);
         articleMapper.IncViewCount(article);
+    }
+
+    //搜索相同内容标签
+    public List<Article> SelectByTag(ArticleDTO articleDTO) {
+        if (StringUtils.isBlank(articleDTO.getTag())) {
+            return new ArrayList<>();
+        }
+        //将tag以,隔开 并且用|拼接起来完成regexp表达式
+        String[] tags = StringUtils.split(articleDTO.getTag(), ",");
+        String regexpTag = Arrays.stream(tags).collect(Collectors.joining("|"));
+        Article article = new Article();
+        article.setId(articleDTO.getId());
+        article.setTag(regexpTag);
+        //拿到了相同标签的文章列表
+        return articleMapper.selectByTag(article);
     }
 }

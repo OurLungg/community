@@ -54,4 +54,8 @@ public interface ArticleMapper {
     //更新文章评论数
     @Update("update article set  comment_count = #{comment_count} where id = #{id}")
     void IncCommentCount(Article article);
+
+    //正则表达式来模糊搜索标签 匹配相关内容
+    @Select("select * from article where id != #{id} and tag regexp #{tag}")
+    List<Article> selectByTag(Article article);
 }

@@ -3,6 +3,7 @@ package life.recruit.community.controller;
 import life.recruit.community.dto.ArticleDTO;
 import life.recruit.community.dto.CommentCreateDTO;
 import life.recruit.community.dto.CommentDTO;
+import life.recruit.community.model.Article;
 import life.recruit.community.service.ArticleService;
 import life.recruit.community.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,17 +40,18 @@ public class ArticleController {
                           Model model) {
         //返回DTO（文章+用户） 是组装后的model
         ArticleDTO articleDTO = articleService.getById(id);
-
+        //获取所有带相同标签的文章
+        List<Article> regexpTagArticle = articleService.SelectByTag(articleDTO);
         //返回DTO（评论+用户）
         List<CommentDTO> comments = commentService.listByArticleId(id);
 
         //增加文章阅读数
         articleService.IncViewCount(id);
 
-
         //将信息展示到页面
         model.addAttribute("comments", comments);
         model.addAttribute("article", articleDTO);
+        model.addAttribute("regexpTagArticle", regexpTagArticle);
         return "article";
     }
 }

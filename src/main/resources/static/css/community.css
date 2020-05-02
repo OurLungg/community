@@ -45,6 +45,7 @@ body {
     color: #999;
     font-size: 13px;
     margin-bottom: 15px;
+    width: 80px;
 }
 
 .jumbotron {
@@ -82,4 +83,20 @@ body {
 
 .article-title{
     margin-top: 25px;
+}
+
+.article-tag{
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.article-tags{
+    line-height: 24px;
+    font-size: 13px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.img{
+    width: 100%;
 }
