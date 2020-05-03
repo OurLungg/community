@@ -1,9 +1,11 @@
 package life.recruit.community.mapper;
 
 import life.recruit.community.dto.ArticleDTO;
+import life.recruit.community.dto.ArticleQueryDTO;
 import life.recruit.community.model.Article;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -25,11 +27,21 @@ public interface ArticleMapper {
     @Select("select count(id) from article")
     Integer count ();
 
+    //统计有关键字的文章数量
+    @Select("select count(*) from article where title regexp #{search}")
+    Integer countBySearch(ArticleQueryDTO articleQueryDTO);
+
+    //根据关键字搜索文章来分页
+    @Select("select * from article where title regexp #{search} order by gmt_modified desc limit #{page} , #{size} ")
+    List<Article> selectBySearch(ArticleQueryDTO articleQueryDTO);
+
+
     //根据用户id来搜索文章
-    @Select("select * from article order by gmt_modified where creator = #{userId} limit #{offset} , #{size}")
+    @Select("select * from article where creator = #{userId}  order by gmt_modified desc limit #{offset} , #{size}")
     List<Article> listByUserId(@Param("userId") Integer userID,
                        @Param("offset") Integer offset,
                        @Param(("size")) Integer size);
+
 
     //统计每个用户id下发布的文章总数
     @Select("select count(id) from article where creator = #{userId}")
@@ -58,4 +70,7 @@ public interface ArticleMapper {
     //正则表达式来模糊搜索标签 匹配相关内容
     @Select("select * from article where id != #{id} and tag regexp #{tag}")
     List<Article> selectByTag(Article article);
+
+
+
 }

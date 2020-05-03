@@ -19,6 +19,7 @@ function postComment( ) {
         data: JSON.stringify({
             "parent_id":articleId,
             "content":content,
+            //type = 1是评论文章 type =2为回复评论 二级评论
             "type":1
         }),
         dataType: "json"
