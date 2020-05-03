@@ -159,3 +159,907 @@
 2020-05-03 17:47:19.777  INFO 94400 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-05-03 17:47:19.782  INFO 94400 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-05-03 17:47:19.803  INFO 94400 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-03 22:16:27.478  INFO 98901 --- [restartedMain] l.r.community.CommunityApplication       : Starting CommunityApplication on 192.168.0.103 with PID 98901 (/Users/wangshaonan/IdeaProjects/community/target/classes started by wangshaonan in /Users/wangshaonan/IdeaProjects/community)
+2020-05-03 22:16:27.482  INFO 98901 --- [restartedMain] l.r.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-05-03 22:16:27.753  INFO 98901 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-03 22:16:27.754  INFO 98901 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-03 22:16:27.803  WARN 98901 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-03 22:16:30.682  INFO 98901 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-03 22:16:30.695  INFO 98901 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 22:16:30.696  INFO 98901 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 22:16:30.796  INFO 98901 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 22:16:30.796  INFO 98901 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3042 ms
+2020-05-03 22:16:31.487  INFO 98901 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 22:16:31.605  INFO 98901 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-03 22:16:32.359  INFO 98901 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-03 22:16:32.657  INFO 98901 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-03 22:16:32.686  INFO 98901 --- [restartedMain] l.r.community.CommunityApplication       : Started CommunityApplication in 6.362 seconds (JVM running for 7.897)
+2020-05-03 22:16:43.278  INFO 98901 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 22:16:43.280  INFO 98901 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-03 22:16:43.302  INFO 98901 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2020-05-03 22:16:43.588  INFO 98901 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-03 22:16:44.640  INFO 98901 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-03 22:16:44.666 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:16:44.723 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:16:44.902 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:16:44.944 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:16:44.945 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:16:44.957 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:16:45.722 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:16:45.723 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:16:45.727 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:01.146 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:01.151 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:01.162 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:01.171 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:01.172 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:01.174 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:01.574 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:01.575 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:01.583 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:01.590 DEBUG 98901 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:01.590 DEBUG 98901 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:01.595 DEBUG 98901 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:01.596 DEBUG 98901 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:01.596 DEBUG 98901 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:01.597 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:01.598 DEBUG 98901 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:01.598 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:01.598 DEBUG 98901 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:01.600 DEBUG 98901 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:01.607 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:01.613 DEBUG 98901 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:05.765 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:05.766 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:05.769 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:05.799 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.community.mapper.ArticleMapper.list  : ==>  Preparing: select * from article order by gmt_modified desc limit ? , ? 
+2020-05-03 22:17:05.801 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.community.mapper.ArticleMapper.list  : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-03 22:17:05.837 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.community.mapper.ArticleMapper.list  : <==      Total: 5
+2020-05-03 22:17:05.840 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:17:05.841 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:17:05.850 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:17:05.864 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:17:05.864 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:17:05.866 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:17:05.867 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:17:05.867 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:17:05.871 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:17:05.872 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:17:05.873 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:17:05.880 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:17:05.882 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:17:05.883 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 7(Integer)
+2020-05-03 22:17:05.888 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:17:05.890 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.ArticleMapper.count         : ==>  Preparing: select count(id) from article 
+2020-05-03 22:17:05.891 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.ArticleMapper.count         : ==> Parameters: 
+2020-05-03 22:17:05.977 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.ArticleMapper.count         : <==      Total: 1
+2020-05-03 22:17:06.178 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:06.179 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:06.189 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:06.190 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:06.194 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:06.195 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:06.196 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:06.204 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:06.204 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:06.205 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:06.207 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:06.217 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:06.217 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:06.218 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:06.231 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:06.467 DEBUG 98901 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:06.468 DEBUG 98901 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:06.469 DEBUG 98901 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:18.487 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:18.488 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:18.494 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:18.498 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:18.499 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:18.500 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:18.556 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:18.556 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:18.560 DEBUG 98901 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:18.561 DEBUG 98901 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:18.562 DEBUG 98901 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:18.562 DEBUG 98901 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:18.565 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:18.570 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:18.571 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:18.577 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:18.585 DEBUG 98901 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:18.588 DEBUG 98901 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:18.600 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:18.601 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:18.610 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:21.815 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:21.816 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:21.819 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:21.826 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:21.826 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:21.835 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:21.894 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:21.895 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:21.895 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:21.896 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:21.900 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:21.900 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:21.904 DEBUG 98901 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:21.905 DEBUG 98901 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:21.906 DEBUG 98901 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:21.907 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:21.907 DEBUG 98901 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:21.911 DEBUG 98901 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:21.913 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:21.913 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:21.919 DEBUG 98901 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:24.152 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:24.153 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:24.155 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:24.160 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:24.160 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:24.164 DEBUG 98901 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:24.209 DEBUG 98901 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:24.209 DEBUG 98901 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:24.216 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:24.217 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:24.218 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:24.218 DEBUG 98901 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:24.218 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:17:24.219 DEBUG 98901 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:24.219 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:24.218 DEBUG 98901 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:24.219 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:17:24.224 DEBUG 98901 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:24.227 DEBUG 98901 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:24.232 DEBUG 98901 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:24.233 DEBUG 98901 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:17:27.609  INFO 98901 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 22:17:27.613  INFO 98901 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-03 22:17:27.626  INFO 98901 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-03 22:18:57.020  INFO 98971 --- [restartedMain] l.r.community.CommunityApplication       : Starting CommunityApplication on 192.168.0.103 with PID 98971 (/Users/wangshaonan/IdeaProjects/community/target/classes started by wangshaonan in /Users/wangshaonan/IdeaProjects/community)
+2020-05-03 22:18:57.025  INFO 98971 --- [restartedMain] l.r.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-05-03 22:18:57.235  INFO 98971 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-03 22:18:57.236  INFO 98971 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-03 22:18:57.387  WARN 98971 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-03 22:18:59.846  INFO 98971 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-03 22:18:59.860  INFO 98971 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 22:18:59.861  INFO 98971 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 22:18:59.948  INFO 98971 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 22:18:59.949  INFO 98971 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2713 ms
+2020-05-03 22:19:00.477  INFO 98971 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 22:19:00.566  INFO 98971 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-03 22:19:00.785  INFO 98971 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-03 22:19:00.854  INFO 98971 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-03 22:19:00.858  INFO 98971 --- [restartedMain] l.r.community.CommunityApplication       : Started CommunityApplication in 4.701 seconds (JVM running for 5.825)
+2020-05-03 22:19:04.650  INFO 98971 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 22:19:04.651  INFO 98971 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-03 22:19:04.661  INFO 98971 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-05-03 22:19:04.888  INFO 98971 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-03 22:19:05.410  INFO 98971 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-03 22:19:05.424 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:05.453 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:05.487 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.002 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.003 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.003 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.003 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.004 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.000 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.004 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.004 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.004 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.004 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.007 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.008 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.009 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.018 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.019 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.021 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.019 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.025 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.059 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.060 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.062 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.878 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.878 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.878 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.879 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.881 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.882 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.938 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.939 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.942 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.944 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.945 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.945 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.946 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.949 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.952 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.964 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.964 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.957 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.965 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.953 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.967 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.970 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.971 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.975 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:06.976 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:06.976 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:06.978 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:23.416 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:23.418 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:23.420 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:23.806 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:23.807 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:23.810 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:23.996 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:23.996 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:23.997 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:23.997 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.001 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.003 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.003 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.003 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.006 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.025 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.026 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.028 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.028 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.053 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.035 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.071 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.072 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.091 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.285 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.285 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.291 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.292 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.293 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.296 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.373 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.374 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.387 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.388 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.388 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.394 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.394 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.394 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.394 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.395 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.398 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.398 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.398 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.400 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.401 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.402 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.405 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.411 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:24.420 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:24.421 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:24.427 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.010 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.017 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.023 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.126 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.127 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.131 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.133 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.133 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.134 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.132 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.143 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.144 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.145 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.145 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.145 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.146 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.150 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.150 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.152 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.155 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.156 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.166 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.167 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.174 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.314 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.314 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.315 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.315 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.316 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.317 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.386 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.386 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.386 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.387 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.388 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.388 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.581 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.581 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.583 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.585 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.585 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.586 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.585 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.586 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.589 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.589 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.589 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.594 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:45.608 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:45.608 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:45.611 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.059 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.060 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.061 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.112 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.112 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.112 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.112 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.120 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.121 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.122 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.123 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.123 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.127 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.128 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.123 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.129 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.127 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.131 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.123 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.138 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.139 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.140 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.141 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.147 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.191 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.192 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.192 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.192 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.194 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.201 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.222 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.222 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.225 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.225 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.229 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.229 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.231 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.232 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.233 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.234 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.234 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.235 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.235 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.235 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.237 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.237 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.238 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.238 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:47.240 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:47.241 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:47.242 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.285 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.286 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.287 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.339 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.340 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.344 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.344 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.345 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.346 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.346 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.348 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.348 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.350 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.351 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.352 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.355 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.357 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.361 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.362 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.363 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.363 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.363 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.365 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.366 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.414 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.415 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.415 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.415 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.421 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.421 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.442 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.442 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.444 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.445 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.444 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.446 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.447 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.447 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.449 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.453 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.454 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.454 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.454 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.455 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.455 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.456 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.456 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:48.456 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:48.458 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.458 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:48.459 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.790 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.791 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.793 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.841 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.841 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.844 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.845 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.848 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.852 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.853 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.857 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.857 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.858 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.858 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.858 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.858 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.859 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.864 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.865 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.867 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.869 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.864 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.874 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.879 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.927 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.929 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.932 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.932 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.933 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.939 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.966 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.966 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.968 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.968 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.968 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.970 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.970 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.971 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.972 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.973 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.974 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.974 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.974 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.975 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.977 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.978 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.979 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.980 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:19:49.983 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:19:49.983 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:19:49.985 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:43.870 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:43.875 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:43.898 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.055 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.060 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.060 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.061 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.063 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.063 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.066 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.067 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.067 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.068 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.068 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.069 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.069 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.069 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.069 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.071 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.077 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.072 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.120 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.121 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.122 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.337 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.337 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.338 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.342 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.348 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.348 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.396 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.396 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.398 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.398 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.404 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.404 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.408 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.411 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.411 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.414 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.414 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.425 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.427 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.428 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.447 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.448 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.448 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.449 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:44.449 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:44.450 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:44.455 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:46.401 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:46.401 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:46.403 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:46.442 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.community.mapper.ArticleMapper.list  : ==>  Preparing: select * from article order by gmt_modified desc limit ? , ? 
+2020-05-03 22:20:46.447 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.community.mapper.ArticleMapper.list  : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-03 22:20:46.475 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.community.mapper.ArticleMapper.list  : <==      Total: 5
+2020-05-03 22:20:46.476 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:20:46.477 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:20:46.480 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:20:46.500 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:20:46.501 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:20:46.502 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:20:46.503 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:20:46.503 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:20:46.505 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:20:46.506 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:20:46.506 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:20:46.508 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:20:46.509 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:20:46.511 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 7(Integer)
+2020-05-03 22:20:46.513 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:20:46.514 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.ArticleMapper.count         : ==>  Preparing: select count(id) from article 
+2020-05-03 22:20:46.514 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.ArticleMapper.count         : ==> Parameters: 
+2020-05-03 22:20:46.523 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.ArticleMapper.count         : <==      Total: 1
+2020-05-03 22:20:46.870 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:46.870 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:46.870 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:46.871 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:46.871 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:46.871 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:46.871 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:46.872 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:46.872 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:46.873 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:46.874 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:46.875 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:46.878 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:46.886 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:46.888 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:47.074 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:47.075 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:47.076 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.324 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.325 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.327 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.408 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.408 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.409 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.409 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.410 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.411 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.415 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.415 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.416 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.416 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.417 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.417 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.418 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.419 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.420 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.421 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.421 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.422 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.436 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.436 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.441 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.491 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.492 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.498 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.499 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.501 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.506 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.545 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.545 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.548 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.551 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.552 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.553 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.556 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.556 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.556 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.556 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.557 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.557 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.560 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.560 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.560 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:20:52.561 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.561 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.561 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:20:52.562 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.562 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:20:52.562 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.010 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.010 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.012 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.060 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.060 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.062 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.063 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.064 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.064 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.064 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.065 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.065 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.066 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.066 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.067 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.068 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.072 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.075 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.078 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.079 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.087 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.091 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.091 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.097 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.169 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.170 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.171 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.172 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.176 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.176 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.216 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.217 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.221 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.222 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.223 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.224 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.227 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.228 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.228 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.230 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.232 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.234 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.234 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.237 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.240 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.241 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.241 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.253 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.253 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.254 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.260 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.403 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.403 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.404 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.459 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.461 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.462 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.462 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.460 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.462 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.462 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.463 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.464 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.465 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.466 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.467 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.471 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.474 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.474 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.476 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.477 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.479 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.483 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.483 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.492 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.551 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.551 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.549 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.554 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.554 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.555 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.591 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.592 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.594 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.595 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.595 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.595 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.594 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.596 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.598 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.600 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.601 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.603 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.605 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.606 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.614 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.622 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.623 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.636 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:01.632 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:01.648 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:01.652 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.701 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.702 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.704 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.748 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.748 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.749 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.749 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.749 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.749 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.753 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.754 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.754 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.755 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.756 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.756 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.757 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.758 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.754 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.765 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.765 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.765 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.771 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.772 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.777 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.842 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.842 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.842 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.842 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.843 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.843 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.881 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.881 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.881 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.882 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.883 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.883 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.886 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.887 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.887 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.887 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.889 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.889 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.890 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.890 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.893 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.893 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.893 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.894 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:02.896 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:02.897 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:02.898 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:47.352 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:47.356 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:47.363 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:47.376 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.community.mapper.ArticleMapper.list  : ==>  Preparing: select * from article order by gmt_modified desc limit ? , ? 
+2020-05-03 22:21:47.378 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.community.mapper.ArticleMapper.list  : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-03 22:21:47.390 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.community.mapper.ArticleMapper.list  : <==      Total: 5
+2020-05-03 22:21:47.392 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:21:47.393 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:21:47.412 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:21:47.414 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:21:47.415 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:21:47.416 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:21:47.417 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:21:47.417 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:21:47.419 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:21:47.419 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:21:47.420 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 9(Integer)
+2020-05-03 22:21:47.424 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:21:47.425 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : ==>  Preparing: select * from tb_github_user_info where id = ? 
+2020-05-03 22:21:47.426 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : ==> Parameters: 7(Integer)
+2020-05-03 22:21:47.428 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findById         : <==      Total: 1
+2020-05-03 22:21:47.429 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.ArticleMapper.count         : ==>  Preparing: select count(id) from article 
+2020-05-03 22:21:47.429 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.ArticleMapper.count         : ==> Parameters: 
+2020-05-03 22:21:47.455 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.ArticleMapper.count         : <==      Total: 1
+2020-05-03 22:21:47.622 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:47.622 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:47.624 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:47.625 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:47.624 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:47.627 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:47.650 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:47.650 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:47.652 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:47.652 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:47.652 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:47.652 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:47.652 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:47.653 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:47.653 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:48.038 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:48.039 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:48.040 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:49.476 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:49.478 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:49.480 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:49.491 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:49.492 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:49.495 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:51.410 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:51.411 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:51.412 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:51.415 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:51.415 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:51.417 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:51.469 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:51.469 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:51.475 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:51.475 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:51.476 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:51.479 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:51.479 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:51.480 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:51.480 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:51.480 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:51.480 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:51.481 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:51.488 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:51.490 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:51.491 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.054 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.054 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.056 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.107 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.107 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.108 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.108 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.109 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.109 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.111 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.111 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.112 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.112 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.113 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.113 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.118 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.118 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.118 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.122 DEBUG 98971 --- [http-nio-8080-exec-10] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.124 DEBUG 98971 --- [http-nio-8080-exec-7] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.126 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.127 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.128 DEBUG 98971 --- [http-nio-8080-exec-3] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.135 DEBUG 98971 --- [http-nio-8080-exec-8] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.202 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.203 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.204 DEBUG 98971 --- [http-nio-8080-exec-6] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.205 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.205 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.207 DEBUG 98971 --- [http-nio-8080-exec-9] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.266 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.266 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.268 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.268 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.270 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.271 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.275 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.275 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.277 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.277 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.282 DEBUG 98971 --- [http-nio-8080-exec-1] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.283 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.284 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.284 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.285 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.285 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.286 DEBUG 98971 --- [http-nio-8080-exec-4] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.289 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==>  Preparing: select * from tb_github_user_info where token = ? 
+2020-05-03 22:21:55.289 DEBUG 98971 --- [http-nio-8080-exec-5] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:21:55.289 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : ==> Parameters: a37f3536-70b5-4f70-b2f0-7e4fb6a55b76(String)
+2020-05-03 22:21:55.290 DEBUG 98971 --- [http-nio-8080-exec-2] l.r.c.mapper.UserMapper.findBytoken      : <==      Total: 0
+2020-05-03 22:22:11.023  INFO 98971 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 22:22:11.027  INFO 98971 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-03 22:22:11.045  INFO 98971 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
