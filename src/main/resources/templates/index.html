@@ -35,8 +35,8 @@
                     </h4>
                     <span th:text="${article.description}"></span> <br>
                     <span class="text-desc">
-                        <span th:text="${article.comment_count}"></span>个回复
-                        <span th:text="${article.view_count}"></span>次浏览
+                        <span th:text="${article.comment_count}"></span>个回复 ·
+                        <span th:text="${article.view_count}"></span>次浏览 ·
                         <span th:text="${#dates.format(article.gmt_create,'yyyy-MM-dd HH:mm')}"></span>
                     </span>
                 </div>
@@ -85,6 +85,8 @@
         </div>
     </div>
 </div>
+
+<div th:insert="footer :: foot"></div>
 
 </body>
 </html>
