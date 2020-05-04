@@ -1,69 +1,81 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>登录页面</title>
 
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <script src="/js/jquery-3.5.0.min.js"></script>
+    <script src="/js/community.js"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
 
 </head>
 <body>
 
 <div class="materialContainer">
-	<div class="box">
-		<div class="title">登录</div>
-		<div class="input">
-			<label for="name">用户名</label>
-			<input type="text" name="name" id="name">
-			<span class="spin"></span>
-		</div>
-		<div class="input">
-			<label for="pass">密码</label>
-			<input type="password" name="pass" id="pass">
-			<span class="spin"></span>
-		</div>
-		<div class="button login">
-			<button>
-				<span>登录</span>
-				<i class="fa fa-check"></i>
-			</button>
-		</div>
-		<div class="pass-forgot">
-            <img src="/img/github.png" class="png-style" alt="">
-            <img src="/img/qq.png" class="png-style" alt="">
-            <img src="/img/wechat.png" class="png-style" alt="">
+
+    <form action="/dologin" method="post">
+        <div class="box">
+            <div class="title">登录</div>
+            <div class="input">
+                <label for="loginName">用户名</label>
+                <input type="text" name="loginName" id="loginName">
+                <span class="spin"></span>
+            </div>
+            <div class="input">
+                <label for="loginPass">密码</label>
+                <input type="password" name="loginPass" id="loginPass">
+                <span class="spin"></span>
+            </div>
+            <div class="button login">
+                <button>
+                    <span><input type="submit" value="登录" style="border: none"></span>
+                    <i class="fa fa-check"></i>
+                </button>
+            </div>
+            <div class="pass-forgot">
+                <img src="/img/github.png" class="png-style" alt="">
+                <img src="/img/qq.png" class="png-style" alt="">
+                <img src="/img/wechat.png" class="png-style" alt="">
+            </div>
         </div>
-	</div>
+    </form>
 
-	<div class="overbox">
-		<div class="material-button alt-2">
-			<span class="shape"></span>
-		</div>
-		<div class="title">注册</div>
-		<div class="input">
-			<label for="regname">用户名</label>
-			<input type="text" name="regname" id="regname">
-			<span class="spin"></span>
-		</div>
-		<div class="input">
-			<label for="regpass">密码</label>
-			<input type="password" name="regpass" id="regpass">
-			<span class="spin"></span>
-		</div>
-		<div class="input">
-			<label for="reregpass">确认密码</label>
-			<input type="password" name="reregpass" id="reregpass">
-			<span class="spin"></span>
-		</div>
-		<div class="button">
-			<button >
-				<span>注册</span>
-			</button>
-		</div>
-	</div>
 
+    <form action="/doregist" method="post">
+	    <div class="overbox">
+            <div class="material-button alt-2">
+                <span class="shape"></span>
+            </div>
+            <div class="title">注册</div>
+            <div class="input">
+                <label for="regName">用户名</label>
+                <input type="text" name="regName" id="regName">
+                <span class="spin"></span>
+            </div>
+            <div class="input">
+                <label for="regPass">密码</label>
+                <input type="password" name="regPass" id="regPass">
+                <span class="spin"></span>
+            </div>
+            <div class="button">
+                <button>
+                    <span><input type="submit" value="注册" style="border: none"></span>
+                </button>
+            </div>
+	    </div>
+    </form>
 </div>
+<div>
+    <span class="alert alert-danger alert-class" th:text="${error}" th:if="${error != null}"></span>
+    <span class="alert alert-success alert-class" th:text="${msg}" th:if="${msg != null}"></span>
+</div>
+
+
 
 <script src="/js/jquery.min.js"></script>
 <script src="/js/index.js"></script>

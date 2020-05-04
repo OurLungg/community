@@ -44,9 +44,6 @@ public class AuthorizeController {
     // 在userMapper中加入@Component 欺骗idea解决问题
 
     @Autowired
-    private UserMapper userMapper;
-
-    @Autowired
     private UserService userService;
 
 
@@ -92,16 +89,4 @@ public class AuthorizeController {
 
     }
 
-    //退出功能
-    @GetMapping("/logout")
-    public String logout(HttpServletRequest request,
-                         HttpServletResponse response){
-        //request 拿到 user 信息
-        //response 拿到 cookie 信息
-        request.getSession().removeAttribute("user");
-        Cookie cookie = new Cookie("token",null);
-        cookie.setMaxAge(0);
-        response.addCookie(cookie);
-        return "redirect:/";
-    }
 }

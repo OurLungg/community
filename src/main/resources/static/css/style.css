@@ -403,3 +403,8 @@ html {
 .png-style{
     height: 30px;
 }
+
+.alert-class{
+    text-align: center;
+    display:block;
+}
