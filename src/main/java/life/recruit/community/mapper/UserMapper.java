@@ -17,10 +17,9 @@ public interface UserMapper {
 
     //mybatis会把#{name}替换成user中的name
     //如果是一个类 可以直接用#{}
-    @Insert("insert into tb_github_user_info (account_id,name,token,gmt_create,gmt_modified,avatar_url) " +
+    @Insert("insert into tb_user (account_id,name,token,gmt_create,gmt_modified,avatar_url) " +
             "values (#{accountId},#{name},#{token},#{gmtCreate},#{gmtModified},#{avatarUrl})")
     void insert(User user);
-
 
 //    @Results({
 //            @Result(property = "id", column = "id"),
@@ -30,23 +29,37 @@ public interface UserMapper {
 //            @Result(property = "gmtCreate", column = "gmt_create"),
 //            @Result(property = "gmtModified", column = "gmt_modified")
 //    })
-    @Select("Select * from tb_github_user_info")
+    @Select("Select * from tb_user")
     List<User> findAll();
 
 
     //如果不是一个类用#{} 需要加一个注解@Param("token")
-    @Select("select * from tb_github_user_info where token = #{token}")
+    @Select("select * from tb_user where token = #{token}")
     User findBytoken(@Param("token") String token);
 
 
-    @Select("select * from tb_github_user_info where id = #{id}")
+    @Select("select * from tb_user where id = #{id}")
     User findById(@Param("id") Integer id);
 
     //变量找value 对象找get方法
-    @Select("select * from tb_github_user_info where account_id = #{accountId}")
+    @Select("select * from tb_user where account_id = #{accountId}")
     User findByAccountId(@Param("accountId") String accountId);
 
-    @Update("update tb_github_user_info set name = #{name} , token = #{token} , gmt_modified = #{gmtModified} ," +
+    @Update("update tb_user set name = #{name} , token = #{token} , gmt_modified = #{gmtModified} ," +
             " avatar_url = #{avatarUrl} where id = #{id}")
     void update(User user);
+
+    @Select("select * from tb_user where username = #{username} and password = #{password}")
+    User findByUsernameAndPassword(@Param("username") String username,
+                                   @Param("password") String password);
+
+    @Insert("insert into tb_user(username,password) values(#{username},#{password})")
+    void regist(User user);
+
+    @Select(("select * from tb_user where username = #{username}"))
+    User findUserByname(@Param("username") String username);
+
+    @Update("update tb_user set token = #{token} where id = #{id}")
+    void updateToken(@Param("id") Integer id ,
+                     @Param("token") String token);
 }

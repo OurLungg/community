@@ -1,7 +1,7 @@
 package life.recruit.community.controller;
 
-import life.recruit.community.model.TbUser;
-import life.recruit.community.service.TbUserService;
+import life.recruit.community.model.User;
+import life.recruit.community.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +19,7 @@ import java.util.UUID;
 public class LoginController {
 
     @Autowired
-    private TbUserService tbUserService;
+    private UserService userService;
 
     @GetMapping("/login")
     String login() {
@@ -32,13 +32,13 @@ public class LoginController {
                    HttpServletRequest request,
                    HttpServletResponse response,
                    Model model) {
-        TbUser tb_user = tbUserService.findByUsernameAndPassword(username, password);
+        User tb_user = userService.findByUsernameAndPassword(username, password);
         if (tb_user != null) {
             //登录成功
             //写入cookie和session
             request.getSession().setAttribute("tb_user",tb_user);
             String token = UUID.randomUUID().toString();
-            tbUserService.updateToken(tb_user);
+            userService.updateToken(tb_user.getId(),token);
             response.addCookie(new Cookie("token",token));
             return "redirect:/";
         } else {
@@ -57,13 +57,13 @@ public class LoginController {
             model.addAttribute("error", "用户名或密码不能为空");
             return "login";
         } else {
-            TbUser user = tbUserService.findUserByname(username);
+            User user = userService.findUserByname(username);
             if (user == null) {
                 //此用户名没人注册 可以注册
-                TbUser tbUser = new TbUser();
+                User tbUser = new User();
                 tbUser.setUsername(username);
                 tbUser.setPassword(password);
-                tbUserService.regist(tbUser);
+                userService.regist(tbUser);
                 model.addAttribute("msg", "恭喜你，注册成功");
                 return "login";
             } else {

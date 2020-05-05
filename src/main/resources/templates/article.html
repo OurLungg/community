@@ -28,7 +28,7 @@
                 </h4>
 
                 <span class="text-desc">
-            作者：<span th:text="${article.user.name}"></span> |
+            作者：<span th:text="${article.user.username}"></span> |
             发布时间：<span th:text="${#dates.format(article.gmt_create,'yyyy-MM-dd')}"></span> |
             阅读数：<span th:text="${article.view_count}"></span>
             </span>
@@ -100,12 +100,12 @@
                     <div class="media-left">
                         <a href="#">
                             <img class="media-object img-rounded"
-                                 th:src="${article.user.avatar_url}">
+                                 th:src="${session.tb_user.avatar_url}">
                         </a>
                     </div>
                     <div class="media-body">
                         <h5 class="media-heading">
-                            <span th:text="${article.user.name}"></span>
+                            <span th:text="${session.tb_user.username}"></span>
                         </h5>
                     </div>
                 </div>

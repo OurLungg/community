@@ -34,7 +34,7 @@ public class UserService {
     }
 
     public void createOrUpdate(User user) {
-        User dbUser = userMapper.findByAccountId(user.getAccountId());
+        User dbUser = userMapper.findByAccountId(user.getAccount_id());
         if (dbUser == null) {
             //插入
             user.setGmt_create(System.currentTimeMillis());
@@ -48,5 +48,21 @@ public class UserService {
             dbUser.setToken(user.getToken());
             userMapper.update(dbUser);
         }
+    }
+
+    public User findByUsernameAndPassword(String username , String password) {
+        return userMapper.findByUsernameAndPassword(username,password);
+    }
+
+    public void regist(User user) {
+        userMapper.regist(user);
+    }
+
+    public User findUserByname(String username) {
+        return userMapper.findUserByname(username);
+    }
+
+    public void updateToken(Integer id,String token){
+        userMapper.updateToken(id,token);
     }
 }

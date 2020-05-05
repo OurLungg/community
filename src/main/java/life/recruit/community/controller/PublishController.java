@@ -2,11 +2,9 @@ package life.recruit.community.controller;
 
 
 import life.recruit.community.dto.ArticleDTO;
-import life.recruit.community.mapper.ArticleMapper;
 import life.recruit.community.model.Article;
 import life.recruit.community.model.User;
 import life.recruit.community.service.ArticleService;
-import life.recruit.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,8 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.jws.WebParam;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 

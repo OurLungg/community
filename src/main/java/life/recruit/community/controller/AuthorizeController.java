@@ -3,11 +3,9 @@ package life.recruit.community.controller;
 
 import life.recruit.community.dto.AccessTokenDTO;
 import life.recruit.community.dto.GithubUser;
-import life.recruit.community.mapper.UserMapper;
 import life.recruit.community.model.User;
 import life.recruit.community.provider.GithubProvider;
 import life.recruit.community.service.UserService;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,7 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
@@ -73,7 +70,7 @@ public class AuthorizeController {
             //对于github用户唯一的标识是accountId，当登录成功后去数据库查询是否有相同的accountId
             //如果有则update最新的token
             //如果没有则create新用户
-            user.setAccountId(String.valueOf(githubUser.getId()));
+            user.setAccount_id(String.valueOf(githubUser.getId()));
             user.setAvatar_url(githubUser.getAvatar_url());
             userService.createOrUpdate(user);
             //将token放入cookie中 做持久化登录状态使用

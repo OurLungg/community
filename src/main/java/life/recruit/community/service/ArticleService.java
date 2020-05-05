@@ -183,6 +183,7 @@ public class ArticleService {
 
     //搜索相同内容标签
     public List<Article> SelectByTag(ArticleDTO articleDTO) {
+        //如果没有则返回空链
         if (StringUtils.isBlank(articleDTO.getTag())) {
             return new ArrayList<>();
         }

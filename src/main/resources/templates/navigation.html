@@ -22,25 +22,12 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <!--               发布-->
-                    <li th:if="${session.user != null}">
+                    <li th:if="${session.tb_user != null}">
                         <a href="/publish">发布信息</a>
                     </li>
 
 <!--                    github-->
-                    <!--                <li><a href="#">登录</a></li>-->
-                    <li class="dropdown" th:if="${session.user != null}">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <!--                        用 th:text="${session.user.getName() 用户的名字来替代  我-->
-                            <span th:text="${session.user.getName()}"></span>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/profile/articles">我的文章</a></li>
-                            <li><a href="#">个人资料</a></li>
-                            <li><a href="/logout">退出登录</a></li>
-                        </ul>
-                    </li>
-                    <li th:if="${session.user == null}"><a href="https://github.com/login/oauth/authorize?client_id=2c24107797a6a41e27d5&redirect_uri=http://localhost:8080/callback&scope=user&state=1">登录</a></li>
+<!--                    <a href="https://github.com/login/oauth/authorize?client_id=2c24107797a6a41e27d5&redirect_uri=http://localhost:8080/callback&scope=user&state=1"></a>-->
 
 <!--                       数据库登录-->
                     <li class="dropdown" th:if="${session.tb_user != null}">
@@ -55,6 +42,7 @@
                             <li><a href="/logout">退出登录</a></li>
                         </ul>
                     </li>
+
                     <li th:if="${session.tb_user == null}"><a th:href="@{'/login'}">登录</a></li>
 
                 </ul>
