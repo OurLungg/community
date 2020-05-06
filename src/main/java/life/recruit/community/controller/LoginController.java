@@ -3,11 +3,15 @@ package life.recruit.community.controller;
 import life.recruit.community.model.User;
 import life.recruit.community.service.UserService;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
@@ -26,6 +30,7 @@ public class LoginController {
         return "login";
     }
 
+
     @PostMapping("/dologin")
     String doLogin(@RequestParam("loginName") String username,
                    @RequestParam("loginPass") String password,
@@ -33,8 +38,16 @@ public class LoginController {
                    HttpServletResponse response,
                    Model model) {
         User tb_user = userService.findByUsernameAndPassword(username, password);
+
+        //1.获取Subject
+        Subject subject = SecurityUtils.getSubject();
+
+        //2.封装用户数据
+        UsernamePasswordToken subjectToken = new UsernamePasswordToken(username,password);
+
         if (tb_user != null) {
             //登录成功
+            subject.login(subjectToken);
             //写入cookie和session
             request.getSession().setAttribute("tb_user",tb_user);
             String token = UUID.randomUUID().toString();
@@ -73,6 +86,12 @@ public class LoginController {
                 return "login";
             }
         }
+    }
+
+    //无权限页面
+    @RequestMapping("/noRole")
+    public String noRole() {
+        return "noRole";
     }
 
 

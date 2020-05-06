@@ -31,7 +31,7 @@ public class Sessioninterceptor implements HandlerInterceptor {
                     User user = userService.findBytoken(token);
                     if(user != null){
                         //如果登录之后 就把user信息放到session中去 做持久化处理
-                        request.getSession().setAttribute("user",user);
+                        request.getSession().setAttribute("tb_user",user);
                     }
                     break;
                 }
