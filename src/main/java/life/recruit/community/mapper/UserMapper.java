@@ -68,4 +68,8 @@ public interface UserMapper {
 
     @Delete("delete from tb_user where id = #{id}")
     void deleteById(@Param("id") Integer id);
+
+    @Update("update tb_user set perms = #{perms} where id = #{id}")
+    void updatePerms(@Param("id") Integer id,
+                     @Param("perms") String perms);
 }

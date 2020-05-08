@@ -52,11 +52,31 @@ public class UserController {
     }
 
 
+    /**
+     * 删除用户
+     * @param id
+     * @return
+     */
     @DeleteMapping("/deleteUser")
     @ResponseBody
     public Result deleteUser(@RequestParam("id") Integer id){
 //        System.out.println("服务器收到的id是：" +id);
         userService.deleteById(id);
+        return Result.success();
+    }
+
+
+    /**
+     * 编辑用户 （目前是上权限）
+     * @param id
+     * @param perms
+     * @return
+     */
+    @PostMapping("/editUser")
+    @ResponseBody
+    public Result userEdit(@RequestParam("id") Integer id,
+                           @RequestParam("perms") String perms){
+        userService.updatePerms(id,perms);
         return Result.success();
     }
 

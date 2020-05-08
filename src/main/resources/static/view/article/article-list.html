@@ -120,7 +120,7 @@
                     , {field: 'username', title: '作者', width: "10%"}
                     , {field: 'tag', title: '标签', width: "20%"}
                     , {field: 'gmt_create', title: '创建时间', width: "20%"}
-                    , {title: '操作', fixed: 'right', align: 'center', width: "18%" , toolbar: '#column-toolbar'}
+                    , {title: '操作', fixed: 'right', align: 'center', width: "15%" , toolbar: '#column-toolbar'}
                 ]
             ]
         });
@@ -158,7 +158,8 @@
                     if (data.code == "200"){
                         parent.layer.msg("删除成功", {icon: 6});
                         //刷新页面
-                        window.location.reload();
+                        // window.location.reload();
+                        table.reload('article-table');
                     }else {
                         parent.layer.msg("删除失败", {icon: 5});
                     }

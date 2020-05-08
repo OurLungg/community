@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../../js/jquery-3.5.0.min.js"></script>
+    <script>
+<!--        获取地址中的用户id-->
+        var id = window.location.href.split("=")[1];
+
+        function userEdit() {
+            var perms = $("#perms").val();
+
+            $.ajax({
+                type: "post",
+                url: "/editUser",
+                data: {
+                    id:id,
+                    perms:perms
+                },
+                dataType: "json",
+                success: function (data) {
+                    if (data.code == "200"){
+                        parent.layer.msg("设置权限成功", {icon: 6});
+                        //刷新页面
+                         window.location.reload();
+                    }else {
+                        parent.layer.msg("设置权限失败", {icon: 5});
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h3>编辑</h3>
+            <label for="perms">权限：</label>
+            <input type="text" id="perms">
+            <button type="button" onclick="userEdit()">提交</button>
+</body>
+</html>

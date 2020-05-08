@@ -71,4 +71,8 @@ public class UserService {
     public void deleteById(Integer id) {
         userMapper.deleteById(id);
     }
+
+    public void updatePerms(Integer id, String perms) {
+        userMapper.updatePerms(id,perms);
+    }
 }

@@ -117,20 +117,11 @@
                         , {field: 'email', title: '邮箱', width: "20%"}
                         , {field: 'gmt_create', title: '创建时间', width: "20%"}
                         , {field: 'gmt_modified', title: '最后登陆时间', width: "20%"}
-                        , {title: '操作', fixed: 'right', align: 'center', toolbar: '#column-toolbar'}
+                        , {title: '操作', fixed: 'right', align: 'center', width:"13%" ,toolbar: '#column-toolbar'}
                     ]
                 ]
             });
 
-            // 账号状态(正常/锁定)点击事件
-            form.on('switch(status)', function(data){
-                if (data.elem.checked) {
-                    parent.layer.msg("激活成功", {icon: 6});
-                } else {
-                    parent.layer.msg("禁用成功", {icon: 6});
-
-                }
-            });
 
             // 工具条点击事件
             table.on('toolbar', function (obj) {
@@ -179,7 +170,8 @@
                         if (data.code == "200"){
                             parent.layer.msg("删除成功", {icon: 6});
                             //刷新页面
-                            window.location.reload();
+                            // window.location.reload();
+                            table.reload('user-table');
                         }else {
                             parent.layer.msg("删除失败", {icon: 5});
                         }
@@ -189,7 +181,7 @@
 
             function edit(id) {
                 layer.open({
-                    content: '/user/' + id,
+                    content: '/view/user/user-edit.html?id=' + id,
                     title: "编辑",
                     area: ['40%', '85%'],
                     type: 2,
