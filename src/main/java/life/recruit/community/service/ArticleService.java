@@ -196,4 +196,9 @@ public class ArticleService {
         //拿到了相同标签的文章列表
         return articleMapper.selectByTag(article);
     }
+
+    //搜索所有文章
+    public List<Article> AllArticle(){
+        return articleMapper.AllArticle();
+    }
 }

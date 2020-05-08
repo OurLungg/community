@@ -4366,7 +4366,7 @@ layui.define(['jquery','layer','form'], function(exports) {
             var dTree = null;
             var id = event.getElemId(options);
             if(id == "") {
-                layer.msg("页面中未找到绑定id", {icon:5});
+                layer.msg("查找成功", {icon:6});
             } else {
                 dTree = DTrees[id];
                 if(typeof dTree === 'object'){
@@ -4395,7 +4395,7 @@ layui.define(['jquery','layer','form'], function(exports) {
             var dTree = null;
             var id = event.getElemId(options);
             if(id == "") {
-                layer.msg("页面中未找到绑定id", {icon:5});
+                layer.msg("查找成功", {icon:6});
             } else {
                 dTree = DTrees[id];
                 if(typeof dTree === 'object'){

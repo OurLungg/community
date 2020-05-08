@@ -31,7 +31,7 @@
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-image: url(/images/loading.gif);
+    background-image: url(/img/loading.gif);
     background-repeat: no-repeat;
     background-position: center;
 }

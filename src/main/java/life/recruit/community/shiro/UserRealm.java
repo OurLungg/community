@@ -32,9 +32,6 @@ public class UserRealm extends AuthorizingRealm {
         //principal从认证的逻辑来
         Subject subject = SecurityUtils.getSubject();
         User user = (User) subject.getPrincipal();
-        UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(),user.getPassword());
-        subject.login(token);
-
         User dbUser = userService.findById(user.getId());
         //添加授权字符串
         info.addStringPermission(dbUser.getPerms());

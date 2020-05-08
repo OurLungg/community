@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -53,8 +53,8 @@
 
                 <li class="layui-nav-item">
                     <a>
-                        <img src="/img/avatar.png" class="layui-nav-img" alt="头像">
-                        <cite>管理员</cite>
+                        <img th:src="${session.tb_user.avatar_url}" class="layui-nav-img" alt="头像">
+                        <cite th:text="${session.tb_user.username}"></cite>
                         <span class="layui-nav-more"></span>
                     </a>
                     <dl class="layui-nav-child">
@@ -91,6 +91,11 @@
                             <dd>
                                 <a lay-id="/user/index" lay-url="/view/user/user-list.html">
                                     <cite>用户管理</cite>
+                                </a>
+                            </dd>
+                            <dd>
+                                <a lay-id="/article/index" lay-url="/view/article/article-list.html">
+                                    <cite>文章管理</cite>
                                 </a>
                             </dd>
                             <dd>
@@ -161,6 +166,7 @@
                         <li lay-id="home" lay-url="/home/index.html" class="layui-this"><i
                                 class="layui-icon layui-icon-home"></i></li>
                     </ul>
+<!--                    显示内容-->
                     <div class="layui-tab-content">
                         <div class="layui-tab-item layui-show">
                             <iframe src="/home/index.html" class="layui-iframe"></iframe>

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.text.SimpleDateFormat;
 import java.util.UUID;
 
 @Controller
@@ -65,7 +66,8 @@ public class LoginController {
     @PostMapping("/doregist")
     String doRegist(@RequestParam("regName") String username,
                     @RequestParam("regPass") String password,
-                    Model model) {
+                    @RequestParam("email") String email,
+                     Model model) {
         if (StringUtils.isBlank(username) || StringUtils.isBlank(password)) {
             model.addAttribute("error", "用户名或密码不能为空");
             return "login";
@@ -76,6 +78,9 @@ public class LoginController {
                 User tbUser = new User();
                 tbUser.setUsername(username);
                 tbUser.setPassword(password);
+                SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                tbUser.setGmt_create(dateformat.format(System.currentTimeMillis()));
+                tbUser.setEmail(email);
                 userService.regist(tbUser);
                 model.addAttribute("msg", "恭喜你，注册成功");
                 return "login";

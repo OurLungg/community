@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>用户管理</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
     <link rel="stylesheet" href="/layui/css/layui.css">
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/font/iconfont.css">
-
+    <link rel="stylesheet" href="/fonts/iconfont.css">
     <link rel="stylesheet" href="/layui/extend/dtree.css">
     <link rel="stylesheet" href="/layui/extend/font/dtreefont.css">
 </head>
@@ -24,27 +23,6 @@
                                id="username" class="layui-input">
                     </div>
 
-                    <label for="email" class="layui-form-label">邮箱</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="email" autocomplete="off"
-                               id="email" class="layui-input">
-                    </div>
-
-                    <label for="deptTree" class="layui-form-label">部门</label>
-                    <div class="layui-input-inline">
-                        <ul id="deptTree" class="dtree" data-id="0" data-value="请选择"></ul>
-                        <input type="hidden" id="deptId" name="deptId">
-                    </div>
-
-                    <label for="status" class="layui-form-label">状态</label>
-                    <div class="layui-input-inline">
-                        <select name="status" id="status">
-                            <option value="">请选择</option>
-                            <option value="1">正常</option>
-                            <option value="0">锁定</option>
-                        </select>
-                    </div>
-
                     <button lay-submit="" lay-filter="search" class="layui-btn layui-btn-sm layui-btn-primary table-action">
                         <i class="zadmin-icon zadmin-icon-search"></i>
                     </button>
@@ -52,6 +30,7 @@
             </div>
         </form>
 
+<!--        显示用户列表-->
         <table class="layui-hide" id="user-table"></table>
     </div>
 
@@ -73,12 +52,8 @@
         <a lay-event="del">
             <i class="zadmin-icon zadmin-icon-delete zadmin-oper-area zadmin-red" title="删除"></i>
         </a>
-
     </script>
 
-    <script type="text/html" id="statusTpl">
-        <input type="checkbox" name="status" value="{{d.userId}}" lay-skin="switch" lay-text="正常|锁定" lay-filter="status" {{ d.status == '1' ? 'checked' : '' }}>
-    </script>
 
     <script src="/js/jquery.js"></script>
     <script src="/layui/layui.js"></script>
@@ -127,7 +102,8 @@
 
             table.render({
                 elem: '#user-table'
-                , url: '/data/user/list.json'
+                // , url: '/data/user/list.json'
+                , url: "/findAll"
                 , page: true
                 , toolbar: '#toolbar'
                 , smartReloadModel: true
@@ -135,13 +111,12 @@
                     [
                         {type:'checkbox'}
                         , {type: 'numbers', title: '序号', width: "5%"}
-                        , {field: 'userId', title: 'ID', width: "10%", hide: true}
-                        , {field: 'username', title: '用户名', width: "15%"}
-                        , {field: 'deptName', title: '部门', width: "12%"}
-                        , {field: 'email', title: '邮箱', width: "12%"}
-                        , {field: 'createTime', title: '创建时间', width: "12%"}
-                        , {field: 'lastLoginTime', title: '最后登陆时间', width: "12%"}
-                        , {field: 'status', title: '状态', templet: "#statusTpl", width: "12%"}
+                        , {field: 'id', title: 'ID', width: "10%", hide: true}
+                        , {field: 'username', title: '用户名', width: "12%"}
+                        , {field: 'perms', title: '权限', width: "12%"}
+                        , {field: 'email', title: '邮箱', width: "15%"}
+                        , {field: 'gmt_create', title: '创建时间', width: "15%"}
+                        , {field: 'lastLoginTime', title: '最后登陆时间', width: "15%"}
                         , {title: '操作', fixed: 'right', align: 'center', toolbar: '#column-toolbar'}
                     ]
                 ]
@@ -176,23 +151,41 @@
 
             // 行点击事件 重置密码
             table.on('tool', function (obj) {
-                var data = obj.data;
+                var userData = obj.data;
                 var event = obj.event;
                 if (event === 'edit') {
-                    edit(data.userId);
+                    edit(userData.id);
                 } else if (event === 'del') {
                     layer.confirm("确定删除用户吗?", {icon: 3, title: '提示'},
                         function (index) {
-                            obj.del();
+                            del(userData.id);
+                            obj.del(userData.id);
                             layer.close(index);
-                            parent.layer.msg("删除成功", {icon: 6});
                         }, function (index) {
                             layer.close(index);
-                        }
+                        },
                     );
                 }
             });
 
+
+            function del(id) {
+                $.ajax({
+                    type: "DELETE",
+                    url: "/deleteUser",
+                    data: {id},
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.code == "200"){
+                            parent.layer.msg("删除成功", {icon: 6});
+                            //刷新页面
+                            window.location.reload();
+                        }else {
+                            parent.layer.msg("删除失败", {icon: 5});
+                        }
+                    }
+                });
+            }
 
             function edit(id) {
                 layer.open({

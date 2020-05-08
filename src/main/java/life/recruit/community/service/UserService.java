@@ -6,6 +6,7 @@ import life.recruit.community.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 //@Service用于将该类声明为一个服务类bean；
@@ -35,14 +36,15 @@ public class UserService {
 
     public void createOrUpdate(User user) {
         User dbUser = userMapper.findByAccountId(user.getAccount_id());
+        SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         if (dbUser == null) {
             //插入
-            user.setGmt_create(System.currentTimeMillis());
+            user.setGmt_create(dateformat.format(System.currentTimeMillis()));
             user.setGmt_modified(user.getGmt_create());
             userMapper.insert(user);
         } else{
             //更新
-            dbUser.setGmt_modified(System.currentTimeMillis());
+            dbUser.setGmt_modified(dateformat.format(System.currentTimeMillis()));
             dbUser.setAvatar_url(user.getAvatar_url());
             dbUser.setName(user.getName());
             dbUser.setToken(user.getToken());
@@ -64,5 +66,9 @@ public class UserService {
 
     public void updateToken(Integer id,String token){
         userMapper.updateToken(id,token);
+    }
+
+    public void deleteById(Integer id) {
+        userMapper.deleteById(id);
     }
 }

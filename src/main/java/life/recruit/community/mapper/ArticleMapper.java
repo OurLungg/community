@@ -23,6 +23,10 @@ public interface ArticleMapper {
     List<Article> list(@Param("offset") Integer offset,
                        @Param(("size")) Integer size);
 
+    //搜索所有文章
+    @Select("select * from article")
+    List<Article> AllArticle();
+
     //统计文章总数
     @Select("select count(id) from article")
     Integer count ();
