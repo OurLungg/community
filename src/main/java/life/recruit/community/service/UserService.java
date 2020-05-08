@@ -64,8 +64,8 @@ public class UserService {
         return userMapper.findUserByname(username);
     }
 
-    public void updateToken(Integer id,String token){
-        userMapper.updateToken(id,token);
+    public void updateToken(User user){
+        userMapper.updateToken(user);
     }
 
     public void deleteById(Integer id) {

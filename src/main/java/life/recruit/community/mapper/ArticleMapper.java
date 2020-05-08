@@ -75,6 +75,6 @@ public interface ArticleMapper {
     @Select("select * from article where id != #{id} and tag regexp #{tag}")
     List<Article> selectByTag(Article article);
 
-
-
+    @Delete("delete from article where id = #{id}")
+    void deleteById(@Param("id") Integer id);
 }

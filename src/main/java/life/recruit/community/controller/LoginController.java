@@ -48,11 +48,15 @@ public class LoginController {
 
         if (tb_user != null) {
             //登录成功
+            //写入登录时间
+            SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            tb_user.setGmt_modified(dateformat.format(System.currentTimeMillis()));
             subject.login(subjectToken);
             //写入cookie和session
             request.getSession().setAttribute("tb_user",tb_user);
             String token = UUID.randomUUID().toString();
-            userService.updateToken(tb_user.getId(),token);
+            tb_user.setToken(token);
+            userService.updateToken(tb_user);
             response.addCookie(new Cookie("token",token));
             return "redirect:/";
         } else {

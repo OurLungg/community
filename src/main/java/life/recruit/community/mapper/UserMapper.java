@@ -31,7 +31,7 @@ public interface UserMapper {
 //    })
 
     //查询用户信息 用于后台管理
-    @Select("Select id,username,perms,email,gmt_create from tb_user")
+    @Select("Select id,username,perms,email,gmt_create,gmt_modified from tb_user")
     List<User> findAll();
 
 
@@ -63,9 +63,8 @@ public interface UserMapper {
     @Select(("select * from tb_user where username = #{username}"))
     User findUserByname(@Param("username") String username);
 
-    @Update("update tb_user set token = #{token} where id = #{id}")
-    void updateToken(@Param("id") Integer id ,
-                     @Param("token") String token);
+    @Update("update tb_user set token = #{token} , gmt_modified = #{gmt_modified} where id = #{id}")
+    void updateToken(User user);
 
     @Delete("delete from tb_user where id = #{id}")
     void deleteById(@Param("id") Integer id);

@@ -8,6 +8,7 @@ import life.recruit.community.dto.CommentCreateDTO;
 import life.recruit.community.dto.CommentDTO;
 import life.recruit.community.model.Article;
 import life.recruit.community.model.User;
+import life.recruit.community.result.Result;
 import life.recruit.community.service.ArticleService;
 import life.recruit.community.service.CommentService;
 import life.recruit.community.service.UserService;
@@ -82,7 +83,7 @@ public class ArticleController {
 // 从数据库查询，这里返回的的article就已经分页成功了
         List<Article> articleList = articleService.AllArticle();
 
-        List articleNameDTOList = new ArrayList<>();
+        List<ArticleNameDTO> articleNameDTOList = new ArrayList<>();
         SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         for (Article article : articleList) {
@@ -107,5 +108,13 @@ public class ArticleController {
         map.put("count",total);
 
         return  map;
+    }
+
+    @DeleteMapping("/deleteArticle")
+    @ResponseBody
+    public Result deleteUser(@RequestParam("id") Integer id){
+//        System.out.println("服务器收到的id是：" +id);
+        articleService.deleteById(id);
+        return Result.success();
     }
 }

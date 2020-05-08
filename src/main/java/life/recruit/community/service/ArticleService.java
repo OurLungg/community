@@ -201,4 +201,9 @@ public class ArticleService {
     public List<Article> AllArticle(){
         return articleMapper.AllArticle();
     }
+
+    //根据id删除文章
+    public void deleteById(Integer id) {
+        articleMapper.deleteById(id);
+    }
 }
