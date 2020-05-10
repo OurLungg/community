@@ -54,3 +54,11 @@ $(document).ready(function () {
     });
 });
 
+function check(){
+    var info = $('input:radio:checked').val();
+    if(info == 1){
+        $("#select-tag").show();
+    } else{
+        $("#select-tag").hide();
+    }
+}

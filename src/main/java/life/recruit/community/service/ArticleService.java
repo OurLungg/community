@@ -33,13 +33,13 @@ public class ArticleService {
     private ArticleMapper articleMapper;
 
 
-    public PaginationDTO list(Integer page, Integer size) {
+    public PaginationDTO list(Integer page, Integer size,Integer type) {
         //page 页码 默认 1 ， size 默认 5(每页5个)
         //一页5个 则当前页数 = 2(i-1)  offset为真实偏移量
         Integer offset = size * (page - 1);
 
         //所有文章的列表
-        List<Article> articleList = articleMapper.list(offset,size);
+        List<Article> articleList = articleMapper.list(offset,size,type);
         //所有文章 + 用户信息的列表
         List<ArticleDTO> articleDTOList = new ArrayList<>();
         //整个页面 ： 文章 + 用户信息 + 分页
@@ -56,7 +56,7 @@ public class ArticleService {
         paginationDTO.setArticles(articleDTOList);
 
         //拿到文章总数
-        Integer totalCount = articleMapper.count();
+        Integer totalCount = articleMapper.countByType(type);
         //算当前页面分页数据
         paginationDTO.setPagination(totalCount,page,size);
 

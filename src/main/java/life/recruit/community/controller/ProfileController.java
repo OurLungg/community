@@ -27,7 +27,7 @@ public class ProfileController {
                           Model model) {
 
         //获取当前用户登录状态
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("tb_user");
         //未登录 返回首页
         if(user == null){
             return "redirect:/";

@@ -35,8 +35,10 @@ public class IndexController {
                         @RequestParam(name = "page",defaultValue = "1") Integer page,
                         @RequestParam(name = "size",defaultValue = "5") Integer size){
 
+//        type=1的文章类型为招聘信息
+        int type = 1;
         //将整个页面信息(文章+用户+分页)装入model模型
-        PaginationDTO pagination = articleService.list(page,size);
+        PaginationDTO pagination = articleService.list(page,size,type);
         model.addAttribute("pagination", pagination);
         //在跳转主页之前把列表信息放入model， 然后在model中渲染html
         return "index";

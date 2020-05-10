@@ -13,23 +13,25 @@ import java.util.List;
 @Mapper
 public interface ArticleMapper {
 
-    @Insert("insert into article(title,description,gmt_create,gmt_modified,creator,tag) " +
-            "values (#{title},#{description},#{gmt_create},#{gmt_modified},#{creator},#{tag})")
+    @Insert("insert into article(type,title,description,gmt_create,gmt_modified,creator,tag) " +
+            "values (#{type},#{title},#{description},#{gmt_create},#{gmt_modified},#{creator},#{tag})")
     void create(Article article);
 
     //显示数据并且添加分页
     //添加非对象的数据类型时 需要自己添加映射 上面的article是对象 不用添加映射
-    @Select("select * from article order by gmt_modified desc limit #{offset} , #{size}")
+//    limit n,m  从n号开始，一页查m个
+    @Select("select * from article where type = #{type} order by gmt_modified desc limit #{offset} , #{size}")
     List<Article> list(@Param("offset") Integer offset,
-                       @Param(("size")) Integer size);
+                       @Param(("size")) Integer size,
+                       @Param("type") Integer type);
 
     //搜索所有文章
     @Select("select * from article")
     List<Article> AllArticle();
 
     //统计文章总数
-    @Select("select count(id) from article")
-    Integer count ();
+    @Select("select count(id) from article where type = #{type}")
+    Integer countByType (@Param("type") Integer type);
 
     //统计有关键字的文章数量
     @Select("select count(*) from article where title regexp #{search}")
@@ -58,7 +60,7 @@ public interface ArticleMapper {
 
 
      //更新文章（编辑）
-    @Update("update article set title = #{title} , description = #{description} , gmt_modified = #{gmt_modified} , tag = #{tag} " +
+    @Update("update article set type = #{type} , title = #{title} , description = #{description} , gmt_modified = #{gmt_modified} , tag = #{tag} " +
             "where id = #{id} ")
     void update(Article article);
 

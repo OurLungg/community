@@ -52,8 +52,10 @@ public class PublishController {
             @RequestParam("description") String description,
             @RequestParam("tag") String tag,
             @RequestParam("id") Integer id,
+            @RequestParam("type") Integer type,
             HttpServletRequest request,
             Model model){
+
         //出问题时可以回写内容  内容回显示
         model.addAttribute("title", title);
         model.addAttribute("description", description);
@@ -75,7 +77,8 @@ public class PublishController {
 
 
         //获取当前用户登录状态
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("tb_user");
+
         if(user == null){
             //model加入之后 直接在前端th:text="${error} 取就可以
             model.addAttribute("error", "用户未登录");
@@ -84,6 +87,7 @@ public class PublishController {
 
 
         Article article = new Article();
+        article.setType(type);
         article.setTitle(title);
         article.setDescription(description);
         article.setTag(tag);

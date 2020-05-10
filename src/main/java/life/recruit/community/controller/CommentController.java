@@ -37,7 +37,7 @@ public class CommentController {
                        HttpServletRequest request) {
 
         //从request中拿到session
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("tb_user");
         if (user == null) {
             //未登录 提示登录 也可以返回未登录界面nologin.html
             return "redirect:/";

@@ -7,6 +7,7 @@ import lombok.Data;
 public class Article {
     private Integer id;
     private String title;
+    private int type;
     private String description;
     private String tag;
     private Long gmt_create;

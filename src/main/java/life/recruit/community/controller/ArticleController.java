@@ -68,6 +68,8 @@ public class ArticleController {
         return "article";
     }
 
+
+//    pageHelper 后台系统分页
     @GetMapping@RequestMapping("/findAllArticles")
     @ResponseBody
     public Map<String,Object> findAllArticles(@RequestParam Map condition){
@@ -110,6 +112,8 @@ public class ArticleController {
         return  map;
     }
 
+
+//    删除文章
     @DeleteMapping("/deleteArticle")
     @ResponseBody
     public Result deleteUser(@RequestParam("id") Integer id){
