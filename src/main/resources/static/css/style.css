@@ -362,7 +362,7 @@
    -ms-transform: translate(50%, -50%) rotate(0deg);
 }
 
-body {
+#loginBody {
    background-image: url(../img/background.jpg);
    background-position: center;
    background-size: cover;
