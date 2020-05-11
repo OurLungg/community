@@ -132,4 +132,14 @@ body {
     color: #666;
 }
 
+.form-group-style{
+    width: 250px;
+}
 
+.form-style{
+    margin: 50px;
+}
+
+.userPhoto{
+    width: 150px;
+}

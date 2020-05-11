@@ -28,12 +28,12 @@
                               
                 <tr>
                     <td width="90">姓名</td>
-                    <td width="100" th:text="${tb_user.username}"></td>
+                    <td width="100" th:text="${tb_user.name}"></td>
                     <td width="89">出生日期</td>
-                    <td width="113">1996.09</td>
+                    <td width="113">1997.03</td>
                     <td width="91">性别</td>
-                    <td width="48">女</td>
-                    <td width="121" rowspan="4" background=""></td>
+                    <td width="48">男</td>
+                    <td width="121" rowspan="4"><img th:src="@{'/images/'+${pic_name}}" class="userPhoto" alt=""></td>
                 </tr>
                 <tr>
                     <td>学历</td>
@@ -101,6 +101,10 @@
         </table>
 
             <br><br><br>
+
+            <a href="/userEdit">
+                <button type="button" class="btn btn-info comment-button">编辑个人资料</button>
+            </a>
 
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 col-xc-12">

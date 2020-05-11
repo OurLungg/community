@@ -79,4 +79,7 @@ public interface UserMapper {
     @Update("update tb_user set bio = #{bio} where id = #{id}")
     void updateBio(@Param("id") Integer id,
                    @Param("bio") String bio);
+
+    @Update("update tb_user set name = #{name} ,email = #{email} , avatar_url = #{avatar_url} where id = #{id}")
+    void updateInfo(User tb_user);
 }

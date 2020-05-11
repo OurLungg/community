@@ -28,7 +28,7 @@
                 </h4>
 
                 <span class="text-desc">
-            作者：<span th:text="${article.user.username}"></span> |
+            作者：<span th:text="${article.user.name}"></span> |
             发布时间：<span th:text="${#dates.format(article.gmt_create,'yyyy-MM-dd')}"></span> |
             阅读数：<span th:text="${article.view_count}"></span>
             </span>
@@ -101,7 +101,7 @@
                     <div class="media-left">
                         <a href="#">
                             <img class="media-object img-rounded"
-                                 th:src="${comment.user.avatar_url}">
+                                 th:src="@{'/images/'+${comment.user.avatar_url}}">
                         </a>
                     </div>
                     <div class="media-body">
@@ -133,12 +133,12 @@
                     <div class="media-left">
                         <a href="#">
                             <img class="media-object img-rounded"
-                                 th:src="${session.tb_user.avatar_url}">
+                                 th:src="@{'/images/'+${session.tb_user.avatar_url}}">
                         </a>
                     </div>
                     <div class="media-body">
                         <h5 class="media-heading">
-                            <span th:text="${session.tb_user.username}"></span>
+                            <span th:text="${session.tb_user.name}"></span>
                         </h5>
                     </div>
                 </div>
@@ -161,12 +161,12 @@
                     <div class="media-left">
                         <a href="#">
                             <img class="media-object img-circle"
-                                 th:src="${article.user.avatar_url}">
+                                 th:src="@{'/images/'+${session.tb_user.avatar_url}}">
                         </a>
                     </div>
                     <div class="media-body">
                         <h5 class="media-heading">
-                            <span th:text="${article.user.username}"></span>
+                            <span th:text="${article.user.name}"></span>
                         </h5>
                     </div>
                 </div>

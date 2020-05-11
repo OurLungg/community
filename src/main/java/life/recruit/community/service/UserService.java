@@ -83,4 +83,9 @@ public class UserService {
     public void updateBio(Integer userId, String userBio) {
         userMapper.updateBio(userId, userBio);
     }
+
+
+    public void updateInfo(User tb_user) {
+        userMapper.updateInfo(tb_user);
+    }
 }

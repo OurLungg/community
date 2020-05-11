@@ -53,8 +53,8 @@
 
                 <li class="layui-nav-item">
                     <a>
-                        <img th:src="${session.tb_user.avatar_url}" class="layui-nav-img" alt="头像">
-                        <cite th:text="${session.tb_user.username}"></cite>
+                        <img th:src="@{'/images/'+${session.tb_user.avatar_url}}" class="layui-nav-img" alt="头像">
+                        <cite th:text="${session.tb_user.name}"></cite>
                         <span class="layui-nav-more"></span>
                     </a>
                     <dl class="layui-nav-child">
