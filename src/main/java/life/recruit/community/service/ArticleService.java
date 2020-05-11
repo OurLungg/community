@@ -206,4 +206,9 @@ public class ArticleService {
     public void deleteById(Integer id) {
         articleMapper.deleteById(id);
     }
+
+    //更新文章的帮助状态a
+    public void updateHelpState(Integer id,Integer state){
+        articleMapper.updateHelpState(id,state);
+    }
 }

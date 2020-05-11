@@ -34,7 +34,7 @@
                     <h4 class="media-heading">
                         <a th:href="@{'/article/'+ ${article.id}}" th:text="${article.title}"></a>
                     </h4>
-                    <span th:text="${article.description}"></span> <br>
+                    <span th:text="${article.description}" class="line-limit-length"></span> <br>
                     <span class="text-desc">
                         <span th:text="${article.comment_count}"></span>个回复 ·
                         <span th:text="${article.view_count}"></span>次浏览 ·

@@ -79,4 +79,9 @@ public interface ArticleMapper {
 
     @Delete("delete from article where id = #{id}")
     void deleteById(@Param("id") Integer id);
+
+    //更新文章帮助状态
+    @Update("update article set state = #{state} where id = #{id} ")
+    void updateHelpState(Integer id,Integer state);
+
 }

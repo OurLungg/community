@@ -75,4 +75,12 @@ public class UserService {
     public void updatePerms(Integer id, String perms) {
         userMapper.updatePerms(id,perms);
     }
+
+    public String selectBio(Integer userId) {
+        return userMapper.selectBio(userId);
+    }
+
+    public void updateBio(Integer userId, String userBio) {
+        userMapper.updateBio(userId, userBio);
+    }
 }

@@ -7,6 +7,8 @@ import lombok.Data;
 public class ArticleDTO {
     private Integer id;
     private String title;
+    private Integer type;
+    private Integer state;
     private String description;
     private String tag;
     private Long gmt_create;
@@ -15,5 +17,6 @@ public class ArticleDTO {
     private Integer view_count;
     private Integer comment_count;
     private Integer like_count;
+
     private User user;
 }

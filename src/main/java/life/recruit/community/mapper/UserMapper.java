@@ -72,4 +72,11 @@ public interface UserMapper {
     @Update("update tb_user set perms = #{perms} where id = #{id}")
     void updatePerms(@Param("id") Integer id,
                      @Param("perms") String perms);
+
+    @Select("select bio from tb_user where id = #{id}")
+    String selectBio(@Param("id") Integer id);
+
+    @Update("update tb_user set bio = #{bio} where id = #{id}")
+    void updateBio(@Param("id") Integer id,
+                   @Param("bio") String bio);
 }

@@ -57,6 +57,37 @@
                 </div>
             </div>
 
+            <!--            慈善帮助信息按钮-->
+<!--            用户不为空 用户不为本章作者 文章类型为慈善信息-->
+            <input type="hidden" id="article_title" th:value="${article.title}">
+            <input type="hidden" id="article_creator" th:value="${article.creator}">
+            <input type="hidden" id="helper" th:value="${session.tb_user.id}">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xc-12"
+                 th:if="${session.tb_user} != null and ${session.tb_user.id} != ${article.creator} and ${article.type} == 2">
+                <button type="button" class="btn btn-success btn-charity" onclick="giveHelp()" th:if="${article.state == 0}">
+                    <span>给予帮助️</span>
+                </button>
+                <button type="button" class="btn btn-success btn-charity" disabled="disabled" th:if="${article.state == 1}">
+                    <span>            ❤️            </span>
+                </button>
+            </div>
+
+<!--            个人看到界面-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xc-12"
+                 th:if="${session.tb_user} != null and ${session.tb_user.id} == ${article.creator} and ${article.type} == 2 and ${article.state == 0}">
+                <button type="button" class="btn btn-default btn-charity">正在寻求帮助中...</button>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xc-12"
+                 th:if="${session.tb_user} != null and ${session.tb_user.id} == ${article.creator} and ${article.type} == 2 and ${article.state == 1}">
+                <button type="button" class="btn btn-success btn-charity" onclick="finish()" >
+                    <span>世上不缺少善良的人 😇 点击完成</span>
+                </button>
+            </div>
+
+
+
+
             <!--            显示评论列表-->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xc-12">
             <h3 >
@@ -88,6 +119,8 @@
                 </div>
             </div>
             </div>
+
+
 
             <!--            评论文章-->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xc-12"  th:if="${session.tb_user} != null">
