@@ -42,7 +42,8 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="/profile/articles">我的文章</a></li>
-                            <li><a href="/userInfo">个人资料</a></li>
+                            <li th:if="${session.tb_user.account_id} == 1"><a href="/userInfo">个人资料</a></li>
+                            <li th:if="${session.tb_user.account_id} == 2"><a href="/companyInfo">企业资料</a></li>
                             <li><a href="/logout">退出登录</a></li>
                         </ul>
                     </li>

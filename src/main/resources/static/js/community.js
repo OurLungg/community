@@ -63,6 +63,7 @@ function check(){
     }
 }
 
+
 function giveHelp() {
     //获取文章id
     var article_id = $("#article_id").val();

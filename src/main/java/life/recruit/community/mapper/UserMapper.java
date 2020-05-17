@@ -57,7 +57,7 @@ public interface UserMapper {
                                    @Param("password") String password);
 
 
-    @Insert("insert into tb_user(username,password,email,gmt_create) values(#{username},#{password},#{email},#{gmt_create})")
+    @Insert("insert into tb_user(username,password,account_id,gmt_create) values(#{username},#{password},#{account_id},#{gmt_create})")
     void regist(User user);
 
     @Select(("select * from tb_user where username = #{username}"))
@@ -82,4 +82,9 @@ public interface UserMapper {
 
     @Update("update tb_user set name = #{name} ,email = #{email} , avatar_url = #{avatar_url} where id = #{id}")
     void updateInfo(User tb_user);
+
+    @Update("update tb_user set name = #{name},avatar_url = #{avatar_url} where id = #{id}")
+    void updateCompany(@Param("name") String name,
+                       @Param("avatar_url") String avatar_url,
+                       @Param("id") int id);
 }

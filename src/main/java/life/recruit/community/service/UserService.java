@@ -88,4 +88,8 @@ public class UserService {
     public void updateInfo(User tb_user) {
         userMapper.updateInfo(tb_user);
     }
+
+    public void updateCompany(String name, String fileName ,int id) {
+        userMapper.updateCompany(name, fileName,id);
+    }
 }

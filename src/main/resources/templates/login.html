@@ -62,16 +62,29 @@
                 <input type="password" name="regPass" id="regPass">
                 <span class="spin"></span>
             </div>
+
+<!--            <div class="input">-->
+<!--                <label for="email">邮箱</label>-->
+<!--                <input type="text" name="email" id="email">-->
+<!--                <span class="spin"></span>-->
+<!--            </div>-->
             <div class="input">
-                <label for="email">邮箱</label>
-                <input type="text" name="email" id="email">
-                <span class="spin"></span>
+                <div class=" input-type">
+                   <input type="radio" style="width:20px" name="type" value="1" checked>
+                    <span class="input-type-span">个人用户</span>
+                </div>
+                <div class=" input-type">
+                    <input type="radio" style="width:20px" name="type" value="2" >
+                    <span class="input-type-span">企业用户</span>
+                </div>
             </div>
+
             <div class="button">
                 <button>
-                    <span><input type="submit" value="注册" style="border: none"></span>
+                    <span><input type="submit" value="注册用户" style="border: none"></span>
                 </button>
             </div>
+
 	    </div>
     </form>
 </div>

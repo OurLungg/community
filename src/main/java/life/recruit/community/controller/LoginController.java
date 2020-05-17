@@ -70,7 +70,7 @@ public class LoginController {
     @PostMapping("/doregist")
     String doRegist(@RequestParam("regName") String username,
                     @RequestParam("regPass") String password,
-                    @RequestParam("email") String email,
+                    @RequestParam("type") String type,
                      Model model) {
         if (StringUtils.isBlank(username) || StringUtils.isBlank(password)) {
             model.addAttribute("error", "用户名或密码不能为空");
@@ -84,7 +84,7 @@ public class LoginController {
                 tbUser.setPassword(password);
                 SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 tbUser.setGmt_create(dateformat.format(System.currentTimeMillis()));
-                tbUser.setEmail(email);
+                tbUser.setAccount_id(type);
                 userService.regist(tbUser);
                 model.addAttribute("msg", "恭喜你，注册成功");
                 return "login";

@@ -40,6 +40,7 @@ public class IndexController {
         //将整个页面信息(文章+用户+分页)装入model模型
         PaginationDTO pagination = articleService.list(page,size,type);
         model.addAttribute("pagination", pagination);
+        model.addAttribute("happy", page);
         //在跳转主页之前把列表信息放入model， 然后在model中渲染html
         return "index";
     }

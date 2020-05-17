@@ -151,3 +151,25 @@ body{
 .userPhoto{
     width: 150px;
 }
+
+.companyPhoto{
+    width: 150px;
+    float: right;
+}
+
+.padding{
+    padding: 20px;
+}
+
+.input-type{
+    float: left;
+}
+
+.input-type-input{
+    width: 20px;
+}
+
+.input-type-span{
+    display: block;
+    margin: 33px;
+}

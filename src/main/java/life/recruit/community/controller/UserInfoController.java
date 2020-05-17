@@ -1,7 +1,6 @@
 package life.recruit.community.controller;
 
 import life.recruit.community.model.User;
-import life.recruit.community.result.Result;
 import life.recruit.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -65,9 +64,8 @@ public class UserInfoController {
         tb_user.setAvatar_url(fileName);
         userService.updateInfo(tb_user);
 
-        model.addAttribute("pic_name", fileName);
-        model.addAttribute("tb_user", tb_user);
-
+//        model.addAttribute("pic_name", fileName);
+//        model.addAttribute("tb_user", tb_user);
         return "userInfo";
     }
 
