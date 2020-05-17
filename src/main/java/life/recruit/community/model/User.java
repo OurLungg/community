@@ -16,4 +16,5 @@ public class User {
     private String gmt_modified;
     private String bio;
     private String avatar_url;
+    private Integer points;
 }

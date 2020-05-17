@@ -12,9 +12,14 @@ import org.springframework.stereotype.Component;
 public interface HelpMapper {
 
 
-    @Insert("INSERT INTO help_info VALUES(#{help.article_id}, #{help.article_creator}, #{help.helper}, #{help.accomplish})")
+    @Insert("INSERT INTO help_info(article_id,article_creator,helper,accomplish)" +
+            " VALUES(#{help.article_id}, #{help.article_creator}, #{help.helper}, #{help.accomplish})")
     void insert(@Param("help") Help help);
 
     @Update("update help_info set accomplish = 1 where  article_id= #{article_id}")
     void updateAccomplish(@Param("article_id") Integer article_id);
+
+    @Update("update tb_user set points = #{points} where id = #{id}")
+    void updatePoints(@Param("points") Integer points,
+                      @Param("id") Integer id);
 }

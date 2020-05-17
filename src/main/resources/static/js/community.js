@@ -84,11 +84,11 @@ function giveHelp() {
         data: JSON.stringify({
             "article_id":article_id,
             "article_creator":article_creator,
-            "helper":helper,
+            "helper": helper,
             "accomplish":0
         }),
         success:function(data){
-          if(data.code == 200) alert("感谢您的爱心，请尽快与主人取得联系！");
+          if(data.code === 200) alert("感谢您的爱心，请尽快与主人取得联系！");
             //刷新页面
             window.location.reload();
         },
@@ -103,8 +103,6 @@ function finish() {
     var article_id = $("#article_id").val();
     //获取文章作者
     var article_title = $("#article_title").val();
-    //获取帮助人id
-    var helper = $("#helper").val();
 
 
     $.ajax({
@@ -117,10 +115,9 @@ function finish() {
         data: {
             id:article_id,
             title:article_title,
-            user:helper
         },
         success:function(data){
-            if(data.code == 200) alert("成功！");
+            if(data.code === 200) alert("成功！");
             //刷新页面
             window.location.reload();
         },

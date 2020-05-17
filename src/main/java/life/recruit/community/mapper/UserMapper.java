@@ -2,6 +2,7 @@ package life.recruit.community.mapper;
 
 
 import life.recruit.community.model.User;
+import life.recruit.community.model.UserInfo;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
@@ -83,8 +84,20 @@ public interface UserMapper {
     @Update("update tb_user set name = #{name} ,email = #{email} , avatar_url = #{avatar_url} where id = #{id}")
     void updateInfo(User tb_user);
 
+    @Insert("insert into user_info (user_id,school,subject,tel,skill,project,info)" +
+            "values(#{user_id},#{school},#{subject},#{tel},#{skill},#{project},#{info})")
+    void createUserInfo(UserInfo userInfo);
+
     @Update("update tb_user set name = #{name},avatar_url = #{avatar_url} where id = #{id}")
     void updateCompany(@Param("name") String name,
                        @Param("avatar_url") String avatar_url,
                        @Param("id") int id);
+
+
+    @Select("select * from user_info where user_id = #{id}")
+    UserInfo findInfoById(@Param("id") Integer id);
+
+    @Select("select points from tb_user where id = #{id}")
+    Integer selectPoints(@Param("id") Integer id);
+
 }

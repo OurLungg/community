@@ -1,6 +1,7 @@
 package life.recruit.community.controller;
 
 import life.recruit.community.model.User;
+import life.recruit.community.model.UserInfo;
 import life.recruit.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,7 +34,10 @@ public class UserInfoController {
     @RequestMapping("/userInfo")
     public String userInfo(Model model, HttpServletRequest request) {
         User tb_user = (User) request.getSession().getAttribute("tb_user");
+        UserInfo userInfo =  userService.findInfoById(tb_user.getId());
+        if(userInfo == null) return "userEdit";
         model.addAttribute("tb_user", tb_user);
+        model.addAttribute("userInfo", userInfo);
         return "userInfo";
     }
 
@@ -46,6 +50,12 @@ public class UserInfoController {
     public String userEditInfo(MultipartFile filename,
                                @RequestParam("name") String name,
                                @RequestParam("email") String email,
+                               @RequestParam("school") String school,
+                               @RequestParam("subject") String subject,
+                               @RequestParam("tel") String tel,
+                               @RequestParam("skill") String skill,
+                               @RequestParam("project") String project,
+                               @RequestParam("info") String info,
                                Model model,
                                HttpServletRequest request) throws Exception{
 
@@ -59,14 +69,25 @@ public class UserInfoController {
         filename.transferTo(new File(parentDirPath + fileName)); //全局配置文件中配置的目录加上文件名
 
         User tb_user = (User) request.getSession().getAttribute("tb_user");
+        UserInfo userInfo = new UserInfo();
+
         tb_user.setName(name);
         tb_user.setEmail(email);
         tb_user.setAvatar_url(fileName);
+        userInfo.setUser_id(tb_user.getId());
+        userInfo.setSchool(school);
+        userInfo.setSubject(subject);
+        userInfo.setTel(tel);
+        userInfo.setSkill(skill);
+        userInfo.setProject(project);
+        userInfo.setInfo(info);
         userService.updateInfo(tb_user);
+        userService.createUserInfo(userInfo);
 
+        model.addAttribute("userInfo", userInfo);
 //        model.addAttribute("pic_name", fileName);
 //        model.addAttribute("tb_user", tb_user);
-        return "userInfo";
+        return "redirect:/userInfo";
     }
 
 

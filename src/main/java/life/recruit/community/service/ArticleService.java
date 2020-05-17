@@ -208,7 +208,11 @@ public class ArticleService {
     }
 
     //更新文章的帮助状态a
-    public void updateHelpState(Integer id,Integer state){
-        articleMapper.updateHelpState(id,state);
+    public void updateHelpState(Integer helper,Integer id,Integer state){
+        articleMapper.updateHelpState(helper,id,state);
+    }
+
+    public Article findById(Integer article_id) {
+        return articleMapper.findById(article_id);
     }
 }

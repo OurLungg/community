@@ -1,11 +1,9 @@
 package life.recruit.community.mapper;
 
-import life.recruit.community.dto.ArticleDTO;
 import life.recruit.community.dto.ArticleQueryDTO;
 import life.recruit.community.model.Article;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -81,7 +79,12 @@ public interface ArticleMapper {
     void deleteById(@Param("id") Integer id);
 
     //更新文章帮助状态
-    @Update("update article set state = #{state} where id = #{id} ")
-    void updateHelpState(Integer id,Integer state);
+    @Update("update article set state = #{state} , helper = #{helper} where id = #{id} ")
+    void updateHelpState(@Param("helper") Integer helper,
+                         @Param("id") Integer id,
+                         @Param("state") Integer state);
+
+    @Select("select * from article where id = #{id}")
+    Article findById(@Param("id") Integer id);
 
 }

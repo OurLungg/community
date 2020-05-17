@@ -17,4 +17,5 @@ public class Article {
     private Integer view_count;
     private Integer comment_count;
     private Integer like_count;
+    private Integer helper;
 }

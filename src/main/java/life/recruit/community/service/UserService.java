@@ -3,6 +3,7 @@ package life.recruit.community.service;
 
 import life.recruit.community.mapper.UserMapper;
 import life.recruit.community.model.User;
+import life.recruit.community.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -91,5 +92,17 @@ public class UserService {
 
     public void updateCompany(String name, String fileName ,int id) {
         userMapper.updateCompany(name, fileName,id);
+    }
+
+    public void createUserInfo(UserInfo userInfo) {
+        userMapper.createUserInfo(userInfo);
+    }
+
+    public UserInfo findInfoById(Integer id) {
+        return userMapper.findInfoById(id);
+    }
+
+    public Integer selectPoints(Integer helper) {
+        return userMapper.selectPoints(helper);
     }
 }

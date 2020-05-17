@@ -69,6 +69,6 @@ public class CompanyController {
         companyMapper.create(company);
         userService.updateCompany(name,fileName,tb_user.getId());
 //        model.addAttribute("company", company);
-        return "redirect:/";
+        return "redirect:/companyInfo";
     }
 }

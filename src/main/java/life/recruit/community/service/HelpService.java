@@ -18,4 +18,8 @@ public class HelpService {
     public void updateAccomplish(Integer articleId) {
         helpMapper.updateAccomplish(articleId);
     }
+
+    public void updatePoints(Integer points, Integer helper) {
+        helpMapper.updatePoints(points,helper);
+    }
 }
