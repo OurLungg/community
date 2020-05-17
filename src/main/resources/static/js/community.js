@@ -49,19 +49,10 @@ function selectTag(value) {
 
 
 $(document).ready(function () {
-            $("#select-tag").show();
+    $("#tag").focus(function(){
+        $("#select-tag").show();
+    });
 });
-
-function check(){
-    var info = $('input:radio:checked').val();
-    if(info == 1){
-        $("#select-tag-job").show();
-        $("#select-tag-charity").hide();
-    } else{
-        $("#select-tag-charity").show();
-        $("#select-tag-job").hide();
-    }
-}
 
 
 function giveHelp() {

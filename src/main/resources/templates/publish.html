@@ -28,25 +28,21 @@
                 提交后跳转到publish的post接口  PostMapping-->
             <form action="/publish" method="post">
 <!--                提交时把属性传递过来 但是不展示到页面-->
+                <input type="hidden" name="type" value="1">
                 <input type="hidden" name="id" th:value="${id}">
                 <div class="form-group">
-                    <label for="title">信息标题</label>
+                    <label for="title">招聘信息标题</label>
                     <input type="text" class="form-control" th:value="${title}" id="title" name="title" placeholder="信息标题" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <label for="title">信息类型</label><br>
-                    <label><input id="recruit-info" name="type" type="radio" value="1" checked onclick="check()"/>   招聘信息    </label>
-                    <label><input id="charity-info" name="type" type="radio" value="2" onclick="check()"/>   慈善信息    </label>
-                </div>
-                <div class="form-group">
-                    <label for="title">信息内容</label>
+                    <label for="title">招聘信息内容</label>
                     <textarea class="form-control" th:text="${description}" name="description" id="description" cols="30" rows="10"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="tag">添加标签</label>
                     <input type="text" class="form-control" th:value="${tag}" id="tag" name="tag" placeholder="输入标签,以','分隔开" autocomplete="off">
                         <!--选择标签框-->
-                    <div id = "select-tag-job" class="tag-tab">
+                    <div id = "select-tag" class="tag-tab">
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active"><a href="#job_1" aria-controls="job_1" role="tab" data-toggle="tab">开发语言</a></li>
                             <li role="presentation"><a href="#job_2" aria-controls="job_2" role="tab" data-toggle="tab">平台框架</a></li>
@@ -85,23 +81,6 @@
                         </div>
                     </div>
 
-                    <div id = "select-tag-charity" class="tag-tab">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#charity_1" aria-controls="charity_1" role="tab" data-toggle="tab">慈善</a></li>
-                            <li role="presentation"><a href="#charity_2" aria-controls="charity_2" role="tab" data-toggle="tab">...</a></li>
-                        </ul>
-
-                        <div class="tab-content" >
-                            <div role="tabpanel" class="tab-pane active" id="charity_1">
-                                <span class="label label-info" onclick="selectTag('生活')">生活</span>
-                                <span class="label label-info" onclick="selectTag('救助')">救助</span>
-                                <span class="label label-info" onclick="selectTag('捐赠')">捐赠</span>
-                                <span class="label label-info" onclick="selectTag('解惑')">解惑</span>
-                                <span class="label label-info" onclick="selectTag('求助')">求助</span>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="charity_2">...</div>
-                    </div>
-                </div>
                 </div>
 
                 <span class="alert alert-danger" th:text="${error}" th:if="${error != null}"></span>

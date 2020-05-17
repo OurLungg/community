@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Recruit Community - Publish</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <script src="/js/jquery-3.5.0.min.js"></script>
+    <script src="/js/community.js"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+
+</head>
+<body>
+<!--导航栏-->
+<div th:insert="navigation :: nav"></div>
+
+
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xc-12">
+            <h2> <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span>
+                发布
+            </h2>
+            <hr>
+
+            <!--            form表单action是提交的地址 提交方式是Post  需要跟submit的button配合
+                            提交后跳转到publish的post接口  PostMapping-->
+            <form action="/publish" method="post">
+                <!--                提交时把属性传递过来 但是不展示到页面-->
+                <input type="hidden" name="id" th:value="${id}">
+                <input type="hidden" name="type" value="2">
+
+                <div class="form-group">
+                    <label for="title">慈善信息标题</label>
+                    <input type="text" class="form-control" th:value="${title}" id="title" name="title" placeholder="信息标题" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="title">慈善信息内容</label>
+                    <textarea class="form-control" th:text="${description}" name="description" id="description" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tag">添加标签</label>
+                    <input type="text" class="form-control" th:value="${tag}" id="tag" name="tag" placeholder="输入标签,以','分隔开" autocomplete="off">
+                    <!--选择标签框-->
+                    <div id = "select-tag" class="tag-tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#charity_1" aria-controls="charity_1" role="tab" data-toggle="tab">慈善</a></li>
+                            <li role="presentation"><a href="#charity_2" aria-controls="charity_2" role="tab" data-toggle="tab">...</a></li>
+                        </ul>
+
+                        <div class="tab-content" >
+                            <div role="tabpanel" class="tab-pane active" id="charity_1">
+                                <span class="label label-info" onclick="selectTag('生活')">生活</span>
+                                <span class="label label-info" onclick="selectTag('救助')">救助</span>
+                                <span class="label label-info" onclick="selectTag('捐赠')">捐赠</span>
+                                <span class="label label-info" onclick="selectTag('解惑')">解惑</span>
+                                <span class="label label-info" onclick="selectTag('求助')">求助</span>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="charity_2">...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="alert alert-danger" th:text="${error}" th:if="${error != null}"></span>
+                <button type="submit" class="btn btn-success btn-publish">发布</button>
+            </form>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xc-12">
+            <h3>发布信息须知</h3>
+            <br>
+            1． 只有本网站成员才能发布活动信息。
+            <br>
+            2． 活动发起人应该具备以下几点：热心、负责，有时间、有精力组织活动，有一定的活动组织经验。
+            <br>
+            3.　为了保证活动的安全，不要组织可能威胁人身安全的活动。
+            <br>
+            4.　活动信息的各项内容请真实、准确地填写，以免产生歧义。
+            <br>
+            5． 活动信息必须经过周密思考后再发布；如有变动，请及时更改。
+            <br>
+            6． 若在“活动信息”栏目中发布违反国家法律法规和网站理念以及一些无意义的不负责任的内容或广告，本网站有权删除，同时取消该发布人在本网站的成员资格。
+        </div>
+    </div>
+</div>
+<div th:insert="footer :: foot"></div>
+</body>
+</html>
