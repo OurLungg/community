@@ -46,29 +46,62 @@
                     <label for="tag">添加标签</label>
                     <input type="text" class="form-control" th:value="${tag}" id="tag" name="tag" placeholder="输入标签,以','分隔开" autocomplete="off">
                         <!--选择标签框-->
-                    <div id = "select-tag" class="tag-tab">
+                    <div id = "select-tag-job" class="tag-tab">
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">开发语言</a></li>
-                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">平台架构</a></li>
-                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">设计模式</a></li>
-                            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">运行环境</a></li>
+                            <li role="presentation" class="active"><a href="#job_1" aria-controls="job_1" role="tab" data-toggle="tab">开发语言</a></li>
+                            <li role="presentation"><a href="#job_2" aria-controls="job_2" role="tab" data-toggle="tab">平台框架</a></li>
+                            <li role="presentation"><a href="#job_3" aria-controls="job_3" role="tab" data-toggle="tab">...</a></li>
                         </ul>
 
                         <div class="tab-content" >
-                            <div role="tabpanel" class="tab-pane active" id="home">
-                                <span class="label label-info" onclick="selectTag('Spring')">Spring</span>
+                            <div role="tabpanel" class="tab-pane active" id="job_1">
+                                <span class="label label-info" onclick="selectTag('Go')">Go</span>
                                 <span class="label label-info" onclick="selectTag('Java')">Java</span>
                                 <span class="label label-info" onclick="selectTag('C++')">C++</span>
+                                <span class="label label-info" onclick="selectTag('javascript')">javascript</span>
+                                <span class="label label-info" onclick="selectTag('php')">php</span>
+                                <span class="label label-info" onclick="selectTag('css')">css</span>
+                                <span class="label label-info" onclick="selectTag('html')">html</span>
+                                <span class="label label-info" onclick="selectTag('node.js')">node.js</span>
+                                <span class="label label-info" onclick="selectTag('python')">python</span>
+                                <span class="label label-info" onclick="selectTag('c')">C</span>
+                                <span class="label label-info" onclick="selectTag('swift')">swift</span>
+                                <span class="label label-info" onclick="selectTag('C#')">C#</span>
+                                <span class="label label-info" onclick="selectTag('typescript')">typescript</span>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="profile">
-                                <span class="label label-info" onclick="selectTag('Spring')">Spring</span>
-                                <span class="label label-info" onclick="selectTag('Java')">Java</span>
-                                <span class="label label-info" onclick="selectTag('C++')">C++</span>
+                            <div role="tabpanel" class="tab-pane" id="job_2">
+                                <span class="label label-info" onclick="selectTag('laravel')">laravel</span>
+                                <span class="label label-info" onclick="selectTag('spring')">spring</span>
+                                <span class="label label-info" onclick="selectTag('express')">express</span>
+                                <span class="label label-info" onclick="selectTag('django')">django</span>
+                                <span class="label label-info" onclick="selectTag('flask')">flask</span>
+                                <span class="label label-info" onclick="selectTag('yii')">yii</span>
+                                <span class="label label-info" onclick="selectTag('ruby-on-rails')">ruby-on-rails</span>
+                                <span class="label label-info" onclick="selectTag('tornado')">tornado</span>
+                                <span class="label label-info" onclick="selectTag('koa')">koa</span>
+                                <span class="label label-info" onclick="selectTag('struts')">struts</span>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="messages">...</div>
-                            <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                            <div role="tabpanel" class="tab-pane" id="job_3">...</div>
                         </div>
                     </div>
+
+                    <div id = "select-tag-charity" class="tag-tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#charity_1" aria-controls="charity_1" role="tab" data-toggle="tab">慈善</a></li>
+                            <li role="presentation"><a href="#charity_2" aria-controls="charity_2" role="tab" data-toggle="tab">...</a></li>
+                        </ul>
+
+                        <div class="tab-content" >
+                            <div role="tabpanel" class="tab-pane active" id="charity_1">
+                                <span class="label label-info" onclick="selectTag('生活')">生活</span>
+                                <span class="label label-info" onclick="selectTag('救助')">救助</span>
+                                <span class="label label-info" onclick="selectTag('捐赠')">捐赠</span>
+                                <span class="label label-info" onclick="selectTag('解惑')">解惑</span>
+                                <span class="label label-info" onclick="selectTag('求助')">求助</span>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="charity_2">...</div>
+                    </div>
+                </div>
                 </div>
 
                 <span class="alert alert-danger" th:text="${error}" th:if="${error != null}"></span>

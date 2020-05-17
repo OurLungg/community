@@ -49,17 +49,17 @@ function selectTag(value) {
 
 
 $(document).ready(function () {
-    $("#tag").focus(function(){
             $("#select-tag").show();
-    });
 });
 
 function check(){
     var info = $('input:radio:checked').val();
     if(info == 1){
-        $("#select-tag").show();
+        $("#select-tag-job").show();
+        $("#select-tag-charity").hide();
     } else{
-        $("#select-tag").hide();
+        $("#select-tag-charity").show();
+        $("#select-tag-job").hide();
     }
 }
 
