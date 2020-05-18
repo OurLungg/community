@@ -3,11 +3,14 @@ package life.recruit.community.controller;
 import life.recruit.community.mapper.CompanyMapper;
 import life.recruit.community.model.Company;
 import life.recruit.community.model.User;
+import life.recruit.community.model.UserInfo;
 import life.recruit.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 
 @Controller
-public class CompanyController {
+public class CompanyInfoController {
 
     @Value("${cbs.imagesPath}")
     private String theSetDir; //全局配置文件中设置的图片的路径
@@ -70,5 +73,15 @@ public class CompanyController {
         userService.updateCompany(name,fileName,tb_user.getId());
 //        model.addAttribute("company", company);
         return "redirect:/companyInfo";
+    }
+
+
+    //查看企业资料
+    @GetMapping("/companyInfo/{id}")
+    public String scanCompanyInfo(Model model,
+                               @PathVariable("id") Integer id) {
+        Company company = companyMapper.selectByUserId(id);
+        model.addAttribute("company", company);
+        return "companyInfo";
     }
 }

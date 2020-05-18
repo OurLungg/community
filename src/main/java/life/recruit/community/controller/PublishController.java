@@ -38,6 +38,7 @@ public class PublishController {
     public String edit(@PathVariable(name = "id") Integer id,
                        Model model) {
         ArticleDTO article = articleService.getById(id);
+        //回显内容
         model.addAttribute("title", article.getTitle());
         model.addAttribute("description", article.getDescription());
         model.addAttribute("tag", article.getTag());

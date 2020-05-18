@@ -70,7 +70,8 @@ public class ArticleController {
 
 
 //    pageHelper 后台系统分页
-    @GetMapping@RequestMapping("/findAllArticles")
+    @GetMapping
+    @RequestMapping("/findAllArticles")
     @ResponseBody
     public Map<String,Object> findAllArticles(@RequestParam Map condition){
 

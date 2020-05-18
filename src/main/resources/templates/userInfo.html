@@ -3,12 +3,12 @@
 <head>
     <title>Recruit Community</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/community.css">
 <!--    <link rel="stylesheet" href="css/userInfo.css">-->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <script src="js/jquery-3.5.0.min.js"></script>
-    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <script src="/js/jquery-3.5.0.min.js"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
 
 </head>
 <body>
@@ -57,8 +57,8 @@
                 </tr>
                 <tr>
                     <td height="100" colspan="1" style="color: red">慈善积分 : </td>
-                    <td th:text="${session.tb_user.points}" colspan="1"> </td>
-                    <td  height="100" colspan="1">慈善经历</td>
+                    <td th:text="${tb_user.points}" colspan="1"> </td>
+                    <td  height="100" width="100px" colspan="1">慈善经历</td>
                     <td colspan="6"> 
                             <span th:text="${tb_user.bio}"></span>
                 </tr>
@@ -74,7 +74,7 @@
 
             <br><br><br>
 
-            <a href="/userEdit">
+            <a href="/userEdit" th:if="${session.tb_user.id == tb_user.id}">
                 <button type="button" class="btn btn-info comment-button">编辑个人资料</button>
             </a>
 

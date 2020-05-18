@@ -158,8 +158,16 @@
                 <h4>发起人</h4>
                 <!--                头像 姓名-->
                 <div class="media">
-                    <div class="media-left">
-                        <a href="#">
+<!--                    个人用户-->
+                    <div class="media-left" th:if="${article.user.account_id=='1'}">
+                        <a th:href="@{'/userInfo/' + ${article.creator}}">
+                            <img class="media-object img-circle"
+                                 th:src="@{'/images/'+${article.user.avatar_url}}">
+                        </a>
+                    </div>
+<!--                    企业用户-->
+                    <div class="media-left" th:if="${article.user.account_id=='2'}">
+                        <a th:href="@{'/companyInfo/' + ${article.creator}}">
                             <img class="media-object img-circle"
                                  th:src="@{'/images/'+${article.user.avatar_url}}">
                         </a>

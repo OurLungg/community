@@ -91,5 +91,16 @@ public class UserInfoController {
     }
 
 
+    //查看他人资料
+    @GetMapping("/userInfo/{id}")
+    public String scanUserInfo(Model model,
+                               @PathVariable("id") Integer id) {
+        User tb_user = userService.findById(id);
+        UserInfo userInfo = userService.findInfoById(id);
+        model.addAttribute("tb_user", tb_user);
+        model.addAttribute("userInfo", userInfo);
+        return "userInfo";
+    }
+
 
 }
